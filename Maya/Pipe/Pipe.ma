@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Pipe.ma
-//Last modified: Sat, Feb 23, 2019 01:53:12 PM
+//Last modified: Sat, Feb 23, 2019 01:53:35 PM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -65,7 +65,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 13.933656650764991;
+	setAttr ".ow" 53.133760309327663;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
