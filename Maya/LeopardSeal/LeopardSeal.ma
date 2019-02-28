@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: LeopardSeal.ma
-//Last modified: Wed, Feb 27, 2019 10:50:25 PM
+//Last modified: Wed, Feb 27, 2019 10:51:59 PM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "67E17532-40B5-DF43-F55A-A58F881EA3D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.2815465579797847 4.7649161565213713 -15.867548499922943 ;
-	setAttr ".r" -type "double3" 347.06164695782041 -4148.1999999907193 0 ;
+	setAttr ".t" -type "double3" 4.8557713683085835 3.9062170047016154 -9.3834244021634632 ;
+	setAttr ".r" -type "double3" 336.26164695781665 -4166.5999999906626 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD9BA757-484F-1CFD-53BB-999F3E4F003A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 7.9355477094991071;
+	setAttr ".coi" 1.605576478588632;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -86,7 +86,7 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 1 0.5 ;
+	setAttr ".pv" -type "double2" 0.67972841858863831 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -155,7 +155,7 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr ".pt[4394]" -type "float3" -9.3132257e-010 0 0 ;
 	setAttr ".pt[4903]" -type "float3" 0.03066049 -0.016054004 -0.0059688203 ;
 	setAttr ".pt[4915]" -type "float3" -4.6566129e-010 0 0 ;
-	setAttr ".pt[4921]" -type "float3" -0.022462936 -0.016054004 -0.0059688203 ;
+	setAttr ".pt[4921]" -type "float3" 0.0011883597 -0.016054004 -0.0059688203 ;
 	setAttr ".pt[4943]" -type "float3" 0.011555661 -0.016054004 -0.0059688203 ;
 	setAttr ".pt[4944]" -type "float3" -0.0042296899 0 0 ;
 	setAttr ".pt[4945]" -type "float3" 0.0084691308 0 0 ;
@@ -253,7 +253,7 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr ".pt[5126]" -type "float3" 0 -0.0033852383 0.0022280202 ;
 	setAttr ".pt[10786]" -type "float3" -2.3283064e-010 0 0 ;
 	setAttr ".pt[10802]" -type "float3" 0.010807496 -0.016054004 -0.0059688203 ;
-	setAttr ".pt[10803]" -type "float3" 0.0051313089 -0.016054004 -0.0059688203 ;
+	setAttr ".pt[10803]" -type "float3" 0.00091459323 -0.016054004 -0.0059688203 ;
 	setAttr ".pt[10806]" -type "float3" 0.014402962 -0.016054004 -0.0059688203 ;
 	setAttr ".pt[10807]" -type "float3" -0.0089062676 -0.016054004 -0.0059688203 ;
 	setAttr ".pt[10810]" -type "float3" 0.014402962 -0.016054004 -0.0059688203 ;
