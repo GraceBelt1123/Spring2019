@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: LeopardSeal.ma
-//Last modified: Thu, Feb 28, 2019 12:23:32 PM
+//Last modified: Thu, Feb 28, 2019 12:26:40 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "67E17532-40B5-DF43-F55A-A58F881EA3D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.263925040408429 4.3068045574946794 -8.6013324815664109 ;
-	setAttr ".r" -type "double3" 349.46164763969404 -4053.7999999871113 0 ;
+	setAttr ".t" -type "double3" 28.683273469114841 19.781886075466009 -17.492710410243589 ;
+	setAttr ".r" -type "double3" 327.26164763714399 -4208.1999999863237 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD9BA757-484F-1CFD-53BB-999F3E4F003A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 8.8540044271310006;
+	setAttr ".coi" 31.194448589710284;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -45069,28 +45069,121 @@ createNode polyMergeVert -n "polyMergeVert6";
 		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
 	setAttr ".am" yes;
 createNode polySplitRing -n "polySplitRing10";
-	rename -uid "98A17EE2-4C0B-B452-DD98-BCB29D3129D1";
+	rename -uid "00FB741D-427F-345C-7493-04924D5A66A1";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 1 "e[23181:23183]";
 	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
 		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
-	setAttr ".wt" 0.70391219854354858;
-	setAttr ".dr" no;
+	setAttr ".wt" 0.49579429626464844;
 	setAttr ".re" 23183;
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
 createNode polySplitRing -n "polySplitRing11";
-	rename -uid "1C6A1ED8-4916-F72A-6422-738EC2CBD57B";
+	rename -uid "969D1181-478D-1413-628A-BB8046ADD684";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 1 "e[23181:23183]";
 	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
 		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
-	setAttr ".wt" 0.42449098825454712;
+	setAttr ".wt" 0.33824455738067627;
 	setAttr ".re" 23183;
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
+createNode polyBridgeEdge -n "polyBridgeEdge33";
+	rename -uid "68D9BF8B-4A93-CE42-723A-D7A07B8FFBAC";
+	setAttr ".ics" -type "componentList" 2 "e[23218]" "e[23253]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 11659;
+	setAttr ".sv2" 11629;
+	setAttr ".d" 1;
+	setAttr ".td" 1;
+createNode polySplitRing -n "polySplitRing12";
+	rename -uid "07BFEFB4-497F-17D3-4B3F-26B3D2BAD740";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[23263:23264]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".wt" 0.65857094526290894;
+	setAttr ".dr" no;
+	setAttr ".re" 23263;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing13";
+	rename -uid "F6813149-469E-3665-6837-D9BBA27C00C0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[23263:23264]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".wt" 0.63131076097488403;
+	setAttr ".dr" no;
+	setAttr ".re" 23263;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyMergeVert -n "polyMergeVert7";
+	rename -uid "58D658D6-40BA-B6EB-01C2-2CBED60343E9";
+	setAttr ".ics" -type "componentList" 2 "vtx[11630]" "vtx[11683]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert8";
+	rename -uid "0B434489-4BA5-A31A-21D4-ED8326F2CECA";
+	setAttr ".ics" -type "componentList" 2 "vtx[11631]" "vtx[11684]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".am" yes;
+createNode polyBridgeEdge -n "polyBridgeEdge34";
+	rename -uid "780F9B4C-4B50-032C-2ABD-8F8621D1A0FB";
+	setAttr ".ics" -type "componentList" 2 "e[23205]" "e[23258]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 11652;
+	setAttr ".sv2" 11677;
+	setAttr ".d" 1;
+	setAttr ".td" 1;
+createNode polySplitRing -n "polySplitRing14";
+	rename -uid "998FBE79-4715-7094-8E9C-80BF0E90C209";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[23268:23269]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".wt" 0.65711694955825806;
+	setAttr ".dr" no;
+	setAttr ".re" 23269;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing15";
+	rename -uid "B46E232A-45C5-40E6-4C28-A19EEE434366";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[23268:23269]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".wt" 0.62914800643920898;
+	setAttr ".dr" no;
+	setAttr ".re" 23269;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyMergeVert -n "polyMergeVert9";
+	rename -uid "33D024AD-49F9-92DD-83A2-058D22BC9178";
+	setAttr ".ics" -type "componentList" 2 "vtx[11683]" "vtx[11686]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert10";
+	rename -uid "9D650021-493F-6422-0E44-0C81AD8FBB62";
+	setAttr ".ics" -type "componentList" 2 "vtx[11684]" "vtx[11687]";
+	setAttr ".ix" -type "matrix" 1.4333953093440077 0 0 0 0 -0.78803733982059765 1.1973384082613736 0
+		 0 -1.1973384082613736 -0.78803733982059765 0 3.9993322357358871 2.3897324707768015 -5.7341899211171761 1;
+	setAttr ".am" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -45126,7 +45219,7 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "polySplitRing11.out" "pSphereShape1.i";
+connectAttr "polyMergeVert10.out" "pSphereShape1.i";
 connectAttr "groupId1.id" "pSphereShape5.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pSphereShape5.iog.og[0].gco";
 connectAttr "groupId2.id" "pSphereShape5.ciog.cog[0].cgid";
@@ -45328,6 +45421,26 @@ connectAttr "polyMergeVert6.out" "polySplitRing10.ip";
 connectAttr "pSphereShape1.wm" "polySplitRing10.mp";
 connectAttr "polySplitRing10.out" "polySplitRing11.ip";
 connectAttr "pSphereShape1.wm" "polySplitRing11.mp";
+connectAttr "polySplitRing11.out" "polyBridgeEdge33.ip";
+connectAttr "pSphereShape1.wm" "polyBridgeEdge33.mp";
+connectAttr "polyBridgeEdge33.out" "polySplitRing12.ip";
+connectAttr "pSphereShape1.wm" "polySplitRing12.mp";
+connectAttr "polySplitRing12.out" "polySplitRing13.ip";
+connectAttr "pSphereShape1.wm" "polySplitRing13.mp";
+connectAttr "polySplitRing13.out" "polyMergeVert7.ip";
+connectAttr "pSphereShape1.wm" "polyMergeVert7.mp";
+connectAttr "polyMergeVert7.out" "polyMergeVert8.ip";
+connectAttr "pSphereShape1.wm" "polyMergeVert8.mp";
+connectAttr "polyMergeVert8.out" "polyBridgeEdge34.ip";
+connectAttr "pSphereShape1.wm" "polyBridgeEdge34.mp";
+connectAttr "polyBridgeEdge34.out" "polySplitRing14.ip";
+connectAttr "pSphereShape1.wm" "polySplitRing14.mp";
+connectAttr "polySplitRing14.out" "polySplitRing15.ip";
+connectAttr "pSphereShape1.wm" "polySplitRing15.mp";
+connectAttr "polySplitRing15.out" "polyMergeVert9.ip";
+connectAttr "pSphereShape1.wm" "polyMergeVert9.mp";
+connectAttr "polyMergeVert9.out" "polyMergeVert10.ip";
+connectAttr "pSphereShape1.wm" "polyMergeVert10.mp";
 connectAttr "Cat:catSG.pa" ":renderPartition.st" -na;
 connectAttr "Cat:blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "Cat1:catSG.pa" ":renderPartition.st" -na;
