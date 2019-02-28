@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: LeopardSeal.ma
-//Last modified: Wed, Feb 27, 2019 11:52:45 PM
+//Last modified: Thu, Feb 28, 2019 04:05:09 AM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "67E17532-40B5-DF43-F55A-A58F881EA3D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.0751682547297516 2.9304523689318716 -9.2102576660856776 ;
-	setAttr ".r" -type "double3" 357.26164695724873 -4198.9999999880674 0 ;
+	setAttr ".t" -type "double3" -5.5882941834041215 6.4111739060332571 -11.703627809103475 ;
+	setAttr ".r" -type "double3" 341.66164695720698 -4085.3999999877246 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD9BA757-484F-1CFD-53BB-999F3E4F003A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2.7701394998289799;
+	setAttr ".coi" 13.69139026138631;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
