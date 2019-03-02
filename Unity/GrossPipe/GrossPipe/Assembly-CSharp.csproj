@@ -70,7 +70,6 @@
     <Compile Include="Assets\Scripts\Flip.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\SlowEnemyDown.cs" />
-    <Compile Include="Assets\Scripts\TapTap.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/10783188/Github_Spring2019/Spring2019/Unity/GrossPipe/GrossPipe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

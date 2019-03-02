@@ -12,15 +12,10 @@ public class Dropping : MonoBehaviour {
         StartCoroutine(Wait());
     }
 
-    private void Start()
-    {
-        
-    }
-
-    IEnumerator Wait()
+       IEnumerator Wait()
     {
         drop.GetComponent<Rigidbody>().useGravity = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.4f);
         drop.GetComponent<NavMeshAgent>().enabled = true;
     }
 }

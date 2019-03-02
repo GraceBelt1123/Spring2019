@@ -7,7 +7,7 @@ public class Chase : MonoBehaviour
 {
     public GameObject target = null;
     private NavMeshAgent itarget = null;
-
+    
     private void Start()
     {
         itarget = this.GetComponent<NavMeshAgent>();
@@ -17,4 +17,5 @@ public class Chase : MonoBehaviour
     {
         itarget.SetDestination(target.transform.position);
     }
+
 }

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class SlowEnemyDown : MonoBehaviour
 {
     public float slowspeed = 2;
-    public float normalspeed = 6;
+    public float normalspeed = 9;
 
     void OnTriggerEnter (Collider Obj)
     {
