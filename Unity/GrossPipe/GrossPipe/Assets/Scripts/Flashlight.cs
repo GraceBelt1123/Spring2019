@@ -16,7 +16,7 @@ public class Flashlight : MonoBehaviour
     private void Update()
     {
         flashlight.enabled = activate;
-        if(Input.GetKeyDown("flashlight"))
+        if(Input.GetKeyDown("f"))
         {
             activate = !activate;
         }

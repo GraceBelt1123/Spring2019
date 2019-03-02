@@ -63,12 +63,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Chase.cs" />
+    <Compile Include="Assets\Scripts\CreateWater.cs" />
     <Compile Include="Assets\Scripts\Crouch.cs" />
     <Compile Include="Assets\Scripts\DoubleJump.cs" />
     <Compile Include="Assets\Scripts\Dropping.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
     <Compile Include="Assets\Scripts\Flip.cs" />
+    <Compile Include="Assets\Scripts\LeakingWater.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\SlowEnemyDown.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/10783188/Github_Spring2019/Spring2019/Unity/GrossPipe/GrossPipe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
