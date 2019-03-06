@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Chase.cs" />
     <Compile Include="Assets\Scripts\Crouch.cs" />
     <Compile Include="Assets\Scripts\destoryEnemy.cs" />
+    <Compile Include="Assets\Scripts\DestroyBullet.cs" />
     <Compile Include="Assets\Scripts\DoubleJump.cs" />
     <Compile Include="Assets\Scripts\Dropping.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />

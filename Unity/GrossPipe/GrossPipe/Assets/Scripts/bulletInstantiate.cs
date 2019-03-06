@@ -6,6 +6,7 @@ public class bulletInstantiate : MonoBehaviour
 {
     public Rigidbody bulletPrefab;
     public Transform causeInstantiate;
+    public int time;
     
     private void Update()
     {
