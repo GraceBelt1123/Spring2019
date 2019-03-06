@@ -27,6 +27,6 @@ public class Movement : MonoBehaviour {
             currentSpeed = defaultSpeed;
         }
         float sugar = Input.GetAxis("Horizontal") * currentSpeed;
-        Player.transform.Translate(sugar * Time.deltaTime, 0, 0);
+        Player.transform.Translate(0, 0, sugar * Time.deltaTime);
     }
 }

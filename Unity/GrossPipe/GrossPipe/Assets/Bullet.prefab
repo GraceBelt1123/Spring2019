@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5331776487349889549}
   - component: {fileID: 9165939170750400547}
   - component: {fileID: 7646163869055777675}
-  - component: {fileID: 7976566873100798007}
+  - component: {fileID: 3276362730955623281}
+  - component: {fileID: 2278279209090786617}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Enemy
@@ -107,9 +108,9 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &7976566873100798007
+--- !u!114 &3276362730955623281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,10 +119,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6175873416429883870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a28789d3995c9c14db92bf7065e66999, type: 3}
+  m_Script: {fileID: 11500000, guid: b5f40932eee2b094c881dc0721aecf99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  damage: 40
-  rig: {fileID: 7646163869055777675}
-  Effect: {fileID: 8083758953874423369, guid: 602705fc1a4dbc6499845ed318b77d7c, type: 3}
+--- !u!65 &2278279209090786617
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175873416429883870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
