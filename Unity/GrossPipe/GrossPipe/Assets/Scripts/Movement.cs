@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour {
     public float currentSpeed;
     public Rigidbody Player;
     public bool iControl = true;
-    public float runSpeed = 16;
+    public float runSpeed = 21;
 
     void Start()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class bulletInstantiate : MonoBehaviour
 {
     public Rigidbody bulletPrefab;
+    public Rigidbody antibodyPrefab;
     public Transform causeInstantiate;
     public int time;
     
@@ -16,6 +17,14 @@ public class bulletInstantiate : MonoBehaviour
             bulletInstance = Instantiate(bulletPrefab, causeInstantiate.position, causeInstantiate.rotation) as Rigidbody;
             bulletInstance.AddForce(causeInstantiate.forward * 5000);
         }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Rigidbody switchInstance;
+            switchInstance = Instantiate(antibodyPrefab, causeInstantiate.position, causeInstantiate.rotation) as Rigidbody;
+            switchInstance.AddForce(causeInstantiate.forward * 5000);
+        }
     }
 
+   
  }
