@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Chase.cs" />
     <Compile Include="Assets\Scripts\Crouch.cs" />
+    <Compile Include="Assets\Scripts\damagePlayer.cs" />
     <Compile Include="Assets\Scripts\destoryEnemy.cs" />
     <Compile Include="Assets\Scripts\DestroyBullet.cs" />
     <Compile Include="Assets\Scripts\DoubleJump.cs" />
@@ -73,9 +74,9 @@
     <Compile Include="Assets\Scripts\enemyHealth.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
     <Compile Include="Assets\Scripts\Flip.cs" />
+    <Compile Include="Assets\Scripts\Healthbar.cs" />
     <Compile Include="Assets\Scripts\hitSlow.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\playerHealth.cs" />
     <Compile Include="Assets\Scripts\SlowEnemyDown.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/10783188/Github_Spring2019/Spring2019/Unity/GrossPipe/GrossPipe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
