@@ -7,39 +7,39 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    public Image currentHealthbar;
-    public Text ratioText;
+    public Image currentHealth;
+    public Text playerText;
 
-    private float hitpoint = 150;
-    private float maxHitpoint = 150;
+    private float hit = 150;
+    private float max = 150;
 
     private void Start()
     {
-        UpdateHealthbar();
+        UpdateHealth();
 
     }
-    private void UpdateHealthbar()
+    private void UpdateHealth()
     {
-        float ratio = hitpoint / maxHitpoint;
-        currentHealthbar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        ratioText.text = (ratio * 100).ToString() + '%';
+        float r = hit / max;
+        currentHealth.rectTransform.localScale = new Vector3(r, 1, 1);
+        playerText.text = (r * 100).ToString() + '%';
     }
     private void TakeDamage(float damage)
     {
-        hitpoint -= damage;
-        if(hitpoint < 0)
+        hit -= damage;
+        if(hit < 0)
         {
-            hitpoint = 0;
+            hit = 0;
             Debug.Log("Dead");
         }
 
-        UpdateHealthbar();
+        UpdateHealth();
     }
     private void HealDamage(float heal)
     {
-        hitpoint += heal;
-        if (hitpoint > maxHitpoint)
-            hitpoint = maxHitpoint;
-        UpdateHealthbar();
+        hit += heal;
+        if (hit > max)
+            hit = max;
+        UpdateHealth();
     }
 }

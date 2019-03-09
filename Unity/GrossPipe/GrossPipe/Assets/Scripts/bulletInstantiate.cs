@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class bulletInstantiate : MonoBehaviour
 {
-    public Rigidbody bulletPrefab;
+    public Rigidbody shootPrefab;
     public Rigidbody antibodyPrefab;
-    public Transform causeInstantiate;
+    public Transform causeInstant;
     public int time;
     
     private void Update()
@@ -14,15 +14,15 @@ public class bulletInstantiate : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
         {
             Rigidbody bulletInstance;
-            bulletInstance = Instantiate(bulletPrefab, causeInstantiate.position, causeInstantiate.rotation) as Rigidbody;
-            bulletInstance.AddForce(causeInstantiate.forward * 5000);
+            bulletInstance = Instantiate(shootPrefab, causeInstant.position, causeInstant.rotation) as Rigidbody;
+            bulletInstance.AddForce(causeInstant.forward * 5000);
         }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
             Rigidbody switchInstance;
-            switchInstance = Instantiate(antibodyPrefab, causeInstantiate.position, causeInstantiate.rotation) as Rigidbody;
-            switchInstance.AddForce(causeInstantiate.forward * 5000);
+            switchInstance = Instantiate(antibodyPrefab, causeInstant.position, causeInstant.rotation) as Rigidbody;
+            switchInstance.AddForce(causeInstant.forward * 5000);
         }
     }
 

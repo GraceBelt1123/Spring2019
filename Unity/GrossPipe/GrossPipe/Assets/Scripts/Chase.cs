@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class Chase : MonoBehaviour
 {
-    public GameObject target = null;
+    public GameObject playerTarget = null;
+    public GameObject Enemy;
     private NavMeshAgent itarget = null;
     
     private void Start()
@@ -15,7 +16,6 @@ public class Chase : MonoBehaviour
 
     private void Update()
     {
-        itarget.SetDestination(target.transform.position);
+        itarget.SetDestination(playerTarget.transform.position);
     }
-
 }

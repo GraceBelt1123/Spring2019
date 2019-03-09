@@ -30,9 +30,4 @@ public class Movement : MonoBehaviour {
         float sugar = Input.GetAxis("Horizontal") * currentSpeed;
         Player.transform.Translate(0, 0, sugar * Time.deltaTime);
     }
-
-    void NoLeftArrow()
-    {
-        if()
-    }
 }

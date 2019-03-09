@@ -7,14 +7,14 @@ using UnityEngine.UI;
 
 public class damagePlayer : MonoBehaviour
 {
-    public bool isDamaging;
+    public bool enemyDamage;
     public float damage = 10;
 
     private void OnTriggerStay(Collider other)
     {
         print("damagePlayer");
         if (other.tag == "Player")
-            other.SendMessage((isDamaging)? "TakeDamage" : "HealDamage", Time.deltaTime * damage);
+            other.SendMessage((enemyDamage)? "TakeDamage" : "HealDamage", Time.deltaTime * damage);
     }
 
     
