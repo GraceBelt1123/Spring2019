@@ -75,7 +75,7 @@
     <Compile Include="Assets\Scripts\Healthbar.cs" />
     <Compile Include="Assets\Scripts\hitSlow.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\onClick.cs" />
+    <Compile Include="Assets\Scripts\pickUp.cs" />
     <Compile Include="Assets\Scripts\SlowEnemyDown.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/10783188/Github_Spring2019/Spring2019/Unity/GrossPipe/GrossPipe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
