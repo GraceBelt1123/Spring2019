@@ -9,15 +9,18 @@ public class Dropping : MonoBehaviour
     public GameObject drop;
 
     void OnTriggerEnter()
-    {
-        StartCoroutine(Wait());
+    {  
+            StartCoroutine(Wait());
     }
 
     IEnumerator Wait()
     {
         drop.GetComponent<Rigidbody>().useGravity = true;
+        print(Time.time);
         yield return new WaitForSeconds(1.4f);
         drop.GetComponent<NavMeshAgent>().enabled = true;
+        yield return null;
+        yield break;
     }
 }
 
