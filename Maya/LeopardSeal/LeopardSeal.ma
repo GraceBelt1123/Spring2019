@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: LeopardSeal.ma
-//Last modified: Fri, Mar 15, 2019 06:56:46 PM
+//Last modified: Fri, Mar 15, 2019 07:08:18 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -38,14 +38,14 @@ createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
 	setAttr ".cs" -type "string" "sRGB";
 createNode transform -s -n "top";
 	rename -uid "07DF98FC-4A11-520A-76EC-83B47339B8F2";
-	setAttr ".t" -type "double3" -17.122107659710714 1021.8238361031232 34.964506603058069 ;
+	setAttr ".t" -type "double3" -17.237041117375824 1021.8238361031232 33.037129921913149 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "3229E8E1-4766-8A1C-78A2-C5B61D846449";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1027.2630688383554;
-	setAttr ".ow" 34.465400008224151;
+	setAttr ".ow" 4.9387353551537627;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -86,14 +86,14 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 createNode transform -n "left";
 	rename -uid "0FBB1935-4E65-D3D3-01BF-37AA46DA5A4E";
-	setAttr ".t" -type "double3" -1000.1 0.43902206319992332 40.125749554854728 ;
+	setAttr ".t" -type "double3" -1000.1 2.5973150049595373 32.994099325913787 ;
 	setAttr ".r" -type "double3" 0 -89.999999999999986 0 ;
 createNode camera -n "leftShape" -p "left";
 	rename -uid "223DFAFC-474A-4035-35E4-95A96E750843";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 23.895801532322515;
+	setAttr ".ow" 4.4699334999039761;
 	setAttr ".imn" -type "string" "left1";
 	setAttr ".den" -type "string" "left1_depth";
 	setAttr ".man" -type "string" "left1_mask";
@@ -132,14 +132,14 @@ createNode camera -n "backShape" -p "back";
 	setAttr ".o" yes;
 createNode transform -n "persp1";
 	rename -uid "4A0B6E5F-4A18-592D-F59A-2DB495726C79";
-	setAttr ".t" -type "double3" -10.655026772458923 3.2914862947070449 46.179593486274982 ;
-	setAttr ".r" -type "double3" -26.13835421350133 -6822.1999999923246 0 ;
+	setAttr ".t" -type "double3" -14.934668979971869 -3.0406123092533344 31.022669363146132 ;
+	setAttr ".r" -type "double3" 66.261645782300207 -7008.599999998728 0 ;
 createNode camera -n "persp1Shape" -p "persp1";
 	rename -uid "BB01AE43-4420-442E-C5E0-A092851810D0";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 6.0245728518418575;
+	setAttr ".coi" 4.2765879937864604;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -64309,9 +64309,13 @@ createNode mesh -n "polySurfaceShape10" -p "transform14";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "polySurface10" -p "polySurface8";
 	rename -uid "9F22EC98-4D4A-9718-1123-7D97D7286835";
-createNode mesh -n "polySurfaceShape11" -p "polySurface10";
+createNode transform -n "transform19" -p "polySurface10";
+	rename -uid "D523F90C-483A-C5C2-31EA-81AFFEDC7997";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape11" -p "transform19";
 	rename -uid "C76A760D-40F5-063F-368E-94A8A3364264";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -64421,15 +64425,158 @@ createNode mesh -n "polySurface11Shape" -p "transform16";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "polySurface13";
 	rename -uid "9BE184D1-49F9-1669-C470-B2BD5EFAF36D";
+	setAttr ".t" -type "double3" 0 -0.27405885980897438 0.57355370342813217 ;
+	setAttr ".s" -type "double3" 1.1528609929065654 1.1528609929065654 1.1528609929065654 ;
 	setAttr ".rp" -type "double3" -15.285922527313232 1.6594124161828081 37.175374984741211 ;
 	setAttr ".sp" -type "double3" -15.285922527313232 1.6594124161828081 37.175374984741211 ;
-createNode mesh -n "polySurface13Shape" -p "|polySurface13";
+createNode transform -n "transform20" -p "|polySurface13";
+	rename -uid "408955AE-473E-F868-2435-3186FEF96755";
+	setAttr ".v" no;
+createNode mesh -n "polySurface13Shape" -p "transform20";
 	rename -uid "ACD365B5-46ED-B993-F5FD-0FAB27F59ADA";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 1 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface14";
+	rename -uid "FE095B0C-461F-8DD8-1375-A0B8CFFA3259";
+	setAttr ".rp" -type "double3" -15.205338001251221 7.3761519531192139 10.339070453629272 ;
+	setAttr ".sp" -type "double3" -15.205338001251221 7.3761519531192139 10.339070453629272 ;
+createNode transform -n "polySurface15" -p "polySurface14";
+	rename -uid "404A696F-48F1-28C1-D530-CAB8EE7A13FA";
+	setAttr ".t" -type "double3" 0 -0.042978636631531675 0.041945662610274326 ;
+	setAttr ".s" -type "double3" 1.0274155422920412 1.0274155422920412 1.0274155422920412 ;
+	setAttr ".rp" -type "double3" 0 0 34.296869725408598 ;
+	setAttr ".sp" -type "double3" 0 0 34.296869725408598 ;
+createNode transform -n "transform23" -p "|polySurface14|polySurface15";
+	rename -uid "98514944-4BDB-C6E0-F91C-2CBB429CB170";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape15" -p "transform23";
+	rename -uid "3AA79E36-4FD3-B140-9FF2-72A7F05845CD";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface16" -p "polySurface14";
+	rename -uid "E61B0543-4BD7-0C25-5FB5-F6BC62885283";
+	setAttr ".rp" -type "double3" 0 0 34.296869725408598 ;
+	setAttr ".sp" -type "double3" 0 0 34.296869725408598 ;
+createNode transform -n "transform22" -p "polySurface16";
+	rename -uid "71317F04-4358-1797-A6E7-938EA7B3B6B0";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape16" -p "transform22";
+	rename -uid "4806A4E7-4E33-DC33-0BCA-C485DC6D152E";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "transform21" -p "polySurface14";
+	rename -uid "87E8449E-49B2-BDC1-F8EF-F4934E8185F9";
+	setAttr ".v" no;
+createNode mesh -n "polySurface13Shape" -p "transform21";
+	rename -uid "819F9D36-4899-35F2-6E34-7CB358C89269";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface15";
+	rename -uid "974C0781-43C6-10CE-F33B-74B277D26D6A";
+	setAttr ".rp" -type "double3" -15.205338001251221 7.3472343131513487 10.480106634995078 ;
+	setAttr ".sp" -type "double3" -15.205338001251221 7.3472343131513487 10.480106634995078 ;
+createNode transform -n "polySurface17" -p "|polySurface15";
+	rename -uid "95A24797-4172-A3D0-15C5-8EA495C52DC6";
+	setAttr ".t" -type "double3" -0.43767235512811276 0 0 ;
+	setAttr ".s" -type "double3" 0.85947873270032527 1 1 ;
+	setAttr ".rp" -type "double3" -9.7915030833522767 0 32.623298756069325 ;
+	setAttr ".sp" -type "double3" -9.7915030833522767 0 32.623298756069325 ;
+createNode transform -n "transform26" -p "|polySurface15|polySurface17";
+	rename -uid "3DF6AD69-4B30-C660-3E26-F69E6F3112E5";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape17" -p "transform26";
+	rename -uid "8D830080-4E86-F92C-BF66-BDB8B4592B33";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 3 ".pt";
+	setAttr ".pt[2]" -type "float3" -0.2409945 0 0 ;
+createNode transform -n "polySurface18" -p "|polySurface15";
+	rename -uid "AF9BA478-4AE0-FFE4-1705-DEA4FE5D85E9";
+createNode transform -n "transform25" -p "polySurface18";
+	rename -uid "AD59CA8C-4236-79EA-5980-C59EC338AB7A";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape18" -p "transform25";
+	rename -uid "811201C5-46D3-85ED-CC74-749905BE3CEB";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "transform24" -p "|polySurface15";
+	rename -uid "614110D5-4619-D9EF-6245-8BA22E530ED6";
+	setAttr ".v" no;
+createNode mesh -n "polySurface15Shape" -p "transform24";
+	rename -uid "AB25C61F-415F-9C8C-5DA9-0C8E6AC685C6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface17";
+	rename -uid "11D7FC1F-49C6-9C05-6000-5297EAD2EA7C";
+	setAttr ".rp" -type "double3" -15.205338001251221 7.347234308719635 10.480104446411133 ;
+	setAttr ".sp" -type "double3" -15.205338001251221 7.347234308719635 10.480104446411133 ;
+createNode mesh -n "polySurface17Shape" -p "|polySurface17";
+	rename -uid "E1D1E435-42D7-DF27-D116-13B14F0554C6";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.25 0.75 ;
+	setAttr ".pv" -type "double2" 0.5 1 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -67058,6 +67205,7 @@ createNode groupParts -n "groupParts20";
 	rename -uid "1B36843C-4CFE-225A-2D91-F3815B2943B2";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:667]";
+	setAttr ".gi" 33;
 createNode polyBridgeEdge -n "polyBridgeEdge8";
 	rename -uid "3FB98B69-48C6-CF70-48DF-F0AA085EA16F";
 	setAttr ".ics" -type "componentList" 2 "e[305]" "e[755]";
@@ -67378,9 +67526,6 @@ createNode polyBridgeEdge -n "polyBridgeEdge38";
 	setAttr ".sv2" 693;
 	setAttr ".d" 1;
 	setAttr ".td" 1;
-createNode groupId -n "groupId33";
-	rename -uid "30781815-446A-E000-8597-2E91B10AE7FF";
-	setAttr ".ihi" 0;
 createNode polyBridgeEdge -n "polyBridgeEdge39";
 	rename -uid "0C300016-4386-A270-4194-1BBB9F15059C";
 	setAttr ".ics" -type "componentList" 2 "e[489]" "e[910]";
@@ -67936,6 +68081,287 @@ createNode polyBridgeEdge -n "polyBridgeEdge97";
 	setAttr ".sv2" 632;
 	setAttr ".d" 1;
 	setAttr ".td" 1;
+createNode polyBridgeEdge -n "polyBridgeEdge98";
+	rename -uid "031BD6DE-4CE1-4224-5BF3-D3823D408D08";
+	setAttr ".ics" -type "componentList" 2 "e[244]" "e[1287]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 49;
+	setAttr ".sv2" 705;
+	setAttr ".d" 1;
+	setAttr ".td" 1;
+createNode polyBridgeEdge -n "polyBridgeEdge99";
+	rename -uid "B8D06717-4DCF-2694-8E63-6DB1CE1D3709";
+	setAttr ".ics" -type "componentList" 2 "e[80]" "e[1285]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 139;
+	setAttr ".sv2" 614;
+	setAttr ".d" 1;
+createNode polyBridgeEdge -n "polyBridgeEdge100";
+	rename -uid "617738BF-4C7E-DEB9-E39A-85ABDE7671E8";
+	setAttr ".ics" -type "componentList" 2 "e[238]" "e[1215]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 61;
+	setAttr ".sv2" 704;
+	setAttr ".d" 1;
+	setAttr ".td" 1;
+createNode polyBridgeEdge -n "polyBridgeEdge101";
+	rename -uid "06F32553-4BE0-940B-65B4-138BBBC056FB";
+	setAttr ".ics" -type "componentList" 2 "e[96]" "e[1217]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 128;
+	setAttr ".sv2" 626;
+	setAttr ".d" 1;
+	setAttr ".td" 1;
+createNode polyCloseBorder -n "polyCloseBorder1";
+	rename -uid "0D1483A7-438C-2D34-B26E-4D97D95CB5EE";
+	setAttr ".ics" -type "componentList" 9 "e[68]" "e[277]" "e[375]" "e[564]" "e[811]" "e[1020]" "e[1118]" "e[1307]" "e[1555:1556]";
+createNode polyTweak -n "polyTweak61";
+	rename -uid "2CB60B5C-4321-5D3C-76C3-F6BE9A1F0E5D";
+	setAttr ".uopa" yes;
+	setAttr -s 42 ".tk";
+	setAttr ".tk[36]" -type "float3" 0 0 -2.3283064e-10 ;
+	setAttr ".tk[37]" -type "float3" 0 0 2.910383e-11 ;
+	setAttr ".tk[41]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[42]" -type "float3" -0.019798277 0.031124953 0.12459003 ;
+	setAttr ".tk[43]" -type "float3" -0.024035115 -0.0057859207 0.12380593 ;
+	setAttr ".tk[158]" -type "float3" -0.011664565 0.01348807 0.12220242 ;
+	setAttr ".tk[159]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[161]" -type "float3" 0 0 -1.1641532e-10 ;
+	setAttr ".tk[197]" -type "float3" 0 0 -2.3283064e-10 ;
+	setAttr ".tk[200]" -type "float3" -0.019798277 0.02565412 0.12459002 ;
+	setAttr ".tk[315]" -type "float3" -0.029317208 0.013488011 0.12220092 ;
+	setAttr ".tk[316]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[318]" -type "float3" 0 0 -1.1641532e-10 ;
+	setAttr ".tk[445]" -type "float3" 0 0 4.6566129e-10 ;
+	setAttr ".tk[447]" -type "float3" 0 0 7.4505806e-09 ;
+	setAttr ".tk[450]" -type "float3" 0 -0.0054708319 7.4505806e-09 ;
+	setAttr ".tk[451]" -type "float3" 0 0.023381367 -0.016387854 ;
+	setAttr ".tk[566]" -type "float3" -0.0031143385 0 3.7252903e-09 ;
+	setAttr ".tk[568]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[569]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[607]" -type "float3" 0 0 -7.4505806e-09 ;
+	setAttr ".tk[608]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[723]" -type "float3" -0.0031143385 0 3.7252903e-09 ;
+	setAttr ".tk[725]" -type "float3" 0 0 -3.7252903e-09 ;
+createNode groupId -n "groupId33";
+	rename -uid "32B66C7A-42DB-5945-BD6F-EB98C0D4FB51";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts21";
+	rename -uid "62768139-46E9-7E78-948E-7499ECC2A360";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:762]";
+createNode polyTweak -n "polyTweak62";
+	rename -uid "6C068803-4503-6235-3ACA-418B0EE7D679";
+	setAttr ".uopa" yes;
+	setAttr -s 9 ".tk";
+	setAttr ".tk[41]" -type "float3" -0.0067978352 0 0 ;
+	setAttr ".tk[43]" -type "float3" 0.0081076771 0 0 ;
+	setAttr ".tk[158]" -type "float3" 0.0047825468 0 0 ;
+	setAttr ".tk[159]" -type "float3" -0.0050109685 0 0 ;
+	setAttr ".tk[315]" -type "float3" -0.001795813 0 0 ;
+	setAttr ".tk[316]" -type "float3" -0.010070253 0 0 ;
+createNode polySplit -n "polySplit52";
+	rename -uid "B9494D5C-4F70-0006-2B6A-889865A2BF42";
+	setAttr -s 2 ".e[0:1]"  1 0;
+	setAttr -s 2 ".d[0:1]"  -2147482837 -2147483273;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit53";
+	rename -uid "843BA4BC-4EF6-350F-EE9D-15B990D22C76";
+	setAttr -s 2 ".e[0:1]"  1 1;
+	setAttr -s 2 ".d[0:1]"  -2147482628 -2147483371;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit54";
+	rename -uid "58D6B9C6-408E-77D3-6B96-01A68DB81DE8";
+	setAttr -s 2 ".e[0:1]"  0 1;
+	setAttr -s 2 ".d[0:1]"  -2147482530 -2147483580;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyUnite -n "polyUnite7";
+	rename -uid "59E14980-4948-EDFC-9E87-D7A97ED6CF92";
+	setAttr -s 2 ".ip";
+	setAttr -s 2 ".im";
+createNode groupId -n "groupId34";
+	rename -uid "59F8CC7A-46B4-A738-EBA5-A4B80A98FC65";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts22";
+	rename -uid "544435C4-4EB8-C1E4-6912-30B3CA8CA6DD";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:1621]";
+createNode polySeparate -n "polySeparate5";
+	rename -uid "A23E42AB-4158-A60A-D4C8-139FC35E6F6D";
+	setAttr ".ic" 2;
+	setAttr -s 2 ".out";
+createNode groupId -n "groupId35";
+	rename -uid "8E0B3E76-4330-7C34-6346-9D9006131859";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts23";
+	rename -uid "67FBC3C4-4D49-7661-3339-E581C1EC1824";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 766 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]" "f[354]" "f[355]" "f[356]" "f[357]" "f[358]" "f[359]" "f[360]" "f[361]" "f[362]" "f[363]" "f[364]" "f[365]" "f[366]" "f[367]" "f[368]" "f[369]" "f[370]" "f[371]" "f[372]" "f[373]" "f[374]" "f[375]" "f[376]" "f[377]" "f[378]" "f[379]" "f[380]" "f[381]" "f[382]" "f[383]" "f[384]" "f[385]" "f[386]" "f[387]" "f[388]" "f[389]" "f[390]" "f[391]" "f[392]" "f[393]" "f[394]" "f[395]" "f[396]" "f[397]" "f[398]" "f[399]" "f[400]" "f[401]" "f[402]" "f[403]" "f[404]" "f[405]" "f[406]" "f[407]" "f[408]" "f[409]" "f[410]" "f[411]" "f[412]" "f[413]" "f[414]" "f[415]" "f[416]" "f[417]" "f[418]" "f[419]" "f[420]" "f[421]" "f[422]" "f[423]" "f[424]" "f[425]" "f[426]" "f[427]" "f[428]" "f[429]" "f[430]" "f[431]" "f[432]" "f[433]" "f[434]" "f[435]" "f[436]" "f[437]" "f[438]" "f[439]" "f[440]" "f[441]" "f[442]" "f[443]" "f[444]" "f[445]" "f[446]" "f[447]" "f[448]" "f[449]" "f[450]" "f[451]" "f[452]" "f[453]" "f[454]" "f[455]" "f[456]" "f[457]" "f[458]" "f[459]" "f[460]" "f[461]" "f[462]" "f[463]" "f[464]" "f[465]" "f[466]" "f[467]" "f[468]" "f[469]" "f[470]" "f[471]" "f[472]" "f[473]" "f[474]" "f[475]" "f[476]" "f[477]" "f[478]" "f[479]" "f[480]" "f[481]" "f[482]" "f[483]" "f[484]" "f[485]" "f[486]" "f[487]" "f[488]" "f[489]" "f[490]" "f[491]" "f[492]" "f[493]" "f[494]" "f[495]" "f[496]" "f[497]" "f[498]" "f[499]" "f[500]" "f[501]" "f[502]" "f[503]" "f[504]" "f[505]" "f[506]" "f[507]" "f[508]" "f[509]" "f[510]" "f[511]" "f[512]" "f[513]" "f[514]" "f[515]" "f[516]" "f[517]" "f[518]" "f[519]" "f[520]" "f[521]" "f[522]" "f[523]" "f[524]" "f[525]" "f[526]" "f[527]" "f[528]" "f[529]" "f[530]" "f[531]" "f[532]" "f[533]" "f[534]" "f[535]" "f[536]" "f[537]" "f[538]" "f[539]" "f[540]" "f[541]" "f[542]" "f[543]" "f[544]" "f[545]" "f[546]" "f[547]" "f[548]" "f[549]" "f[550]" "f[551]" "f[552]" "f[553]" "f[554]" "f[555]" "f[556]" "f[557]" "f[558]" "f[559]" "f[560]" "f[561]" "f[562]" "f[563]" "f[564]" "f[565]" "f[566]" "f[567]" "f[568]" "f[569]" "f[570]" "f[571]" "f[572]" "f[573]" "f[574]" "f[575]" "f[576]" "f[577]" "f[578]" "f[579]" "f[580]" "f[581]" "f[582]" "f[583]" "f[584]" "f[585]" "f[586]" "f[587]" "f[588]" "f[589]" "f[590]" "f[591]" "f[592]" "f[593]" "f[594]" "f[595]" "f[596]" "f[597]" "f[598]" "f[599]" "f[600]" "f[601]" "f[602]" "f[603]" "f[604]" "f[605]" "f[606]" "f[607]" "f[608]" "f[609]" "f[610]" "f[611]" "f[612]" "f[613]" "f[614]" "f[615]" "f[616]" "f[617]" "f[618]" "f[619]" "f[620]" "f[621]" "f[622]" "f[623]" "f[624]" "f[625]" "f[626]" "f[627]" "f[628]" "f[629]" "f[630]" "f[631]" "f[632]" "f[633]" "f[634]" "f[635]" "f[636]" "f[637]" "f[638]" "f[639]" "f[640]" "f[641]" "f[642]" "f[643]" "f[644]" "f[645]" "f[646]" "f[647]" "f[648]" "f[649]" "f[650]" "f[651]" "f[652]" "f[653]" "f[654]" "f[655]" "f[656]" "f[657]" "f[658]" "f[659]" "f[660]" "f[661]" "f[662]" "f[663]" "f[664]" "f[665]" "f[666]" "f[667]" "f[668]" "f[669]" "f[670]" "f[671]" "f[672]" "f[673]" "f[674]" "f[675]" "f[676]" "f[677]" "f[678]" "f[679]" "f[680]" "f[681]" "f[682]" "f[683]" "f[684]" "f[685]" "f[686]" "f[687]" "f[688]" "f[689]" "f[690]" "f[691]" "f[692]" "f[693]" "f[694]" "f[695]" "f[696]" "f[697]" "f[698]" "f[699]" "f[700]" "f[701]" "f[702]" "f[703]" "f[704]" "f[705]" "f[706]" "f[707]" "f[708]" "f[709]" "f[710]" "f[711]" "f[712]" "f[713]" "f[714]" "f[715]" "f[716]" "f[717]" "f[718]" "f[719]" "f[720]" "f[721]" "f[722]" "f[723]" "f[724]" "f[725]" "f[726]" "f[727]" "f[728]" "f[729]" "f[730]" "f[731]" "f[732]" "f[733]" "f[734]" "f[735]" "f[736]" "f[737]" "f[738]" "f[739]" "f[740]" "f[741]" "f[742]" "f[743]" "f[744]" "f[745]" "f[746]" "f[747]" "f[748]" "f[749]" "f[750]" "f[751]" "f[752]" "f[753]" "f[754]" "f[755]" "f[756]" "f[757]" "f[758]" "f[759]" "f[760]" "f[761]" "f[762]" "f[763]" "f[764]" "f[765]";
+createNode groupId -n "groupId36";
+	rename -uid "FFC0D749-4895-1570-362E-BE9E997C5AD4";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts24";
+	rename -uid "FF34C246-4C39-0617-6985-EAA3A914BD5D";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 856 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]" "f[354]" "f[355]" "f[356]" "f[357]" "f[358]" "f[359]" "f[360]" "f[361]" "f[362]" "f[363]" "f[364]" "f[365]" "f[366]" "f[367]" "f[368]" "f[369]" "f[370]" "f[371]" "f[372]" "f[373]" "f[374]" "f[375]" "f[376]" "f[377]" "f[378]" "f[379]" "f[380]" "f[381]" "f[382]" "f[383]" "f[384]" "f[385]" "f[386]" "f[387]" "f[388]" "f[389]" "f[390]" "f[391]" "f[392]" "f[393]" "f[394]" "f[395]" "f[396]" "f[397]" "f[398]" "f[399]" "f[400]" "f[401]" "f[402]" "f[403]" "f[404]" "f[405]" "f[406]" "f[407]" "f[408]" "f[409]" "f[410]" "f[411]" "f[412]" "f[413]" "f[414]" "f[415]" "f[416]" "f[417]" "f[418]" "f[419]" "f[420]" "f[421]" "f[422]" "f[423]" "f[424]" "f[425]" "f[426]" "f[427]" "f[428]" "f[429]" "f[430]" "f[431]" "f[432]" "f[433]" "f[434]" "f[435]" "f[436]" "f[437]" "f[438]" "f[439]" "f[440]" "f[441]" "f[442]" "f[443]" "f[444]" "f[445]" "f[446]" "f[447]" "f[448]" "f[449]" "f[450]" "f[451]" "f[452]" "f[453]" "f[454]" "f[455]" "f[456]" "f[457]" "f[458]" "f[459]" "f[460]" "f[461]" "f[462]" "f[463]" "f[464]" "f[465]" "f[466]" "f[467]" "f[468]" "f[469]" "f[470]" "f[471]" "f[472]" "f[473]" "f[474]" "f[475]" "f[476]" "f[477]" "f[478]" "f[479]" "f[480]" "f[481]" "f[482]" "f[483]" "f[484]" "f[485]" "f[486]" "f[487]" "f[488]" "f[489]" "f[490]" "f[491]" "f[492]" "f[493]" "f[494]" "f[495]" "f[496]" "f[497]" "f[498]" "f[499]" "f[500]" "f[501]" "f[502]" "f[503]" "f[504]" "f[505]" "f[506]" "f[507]" "f[508]" "f[509]" "f[510]" "f[511]" "f[512]" "f[513]" "f[514]" "f[515]" "f[516]" "f[517]" "f[518]" "f[519]" "f[520]" "f[521]" "f[522]" "f[523]" "f[524]" "f[525]" "f[526]" "f[527]" "f[528]" "f[529]" "f[530]" "f[531]" "f[532]" "f[533]" "f[534]" "f[535]" "f[536]" "f[537]" "f[538]" "f[539]" "f[540]" "f[541]" "f[542]" "f[543]" "f[544]" "f[545]" "f[546]" "f[547]" "f[548]" "f[549]" "f[550]" "f[551]" "f[552]" "f[553]" "f[554]" "f[555]" "f[556]" "f[557]" "f[558]" "f[559]" "f[560]" "f[561]" "f[562]" "f[563]" "f[564]" "f[565]" "f[566]" "f[567]" "f[568]" "f[569]" "f[570]" "f[571]" "f[572]" "f[573]" "f[574]" "f[575]" "f[576]" "f[577]" "f[578]" "f[579]" "f[580]" "f[581]" "f[582]" "f[583]" "f[584]" "f[585]" "f[586]" "f[587]" "f[588]" "f[589]" "f[590]" "f[591]" "f[592]" "f[593]" "f[594]" "f[595]" "f[596]" "f[597]" "f[598]" "f[599]" "f[600]" "f[601]" "f[602]" "f[603]" "f[604]" "f[605]" "f[606]" "f[607]" "f[608]" "f[609]" "f[610]" "f[611]" "f[612]" "f[613]" "f[614]" "f[615]" "f[616]" "f[617]" "f[618]" "f[619]" "f[620]" "f[621]" "f[622]" "f[623]" "f[624]" "f[625]" "f[626]" "f[627]" "f[628]" "f[629]" "f[630]" "f[631]" "f[632]" "f[633]" "f[634]" "f[635]" "f[636]" "f[637]" "f[638]" "f[639]" "f[640]" "f[641]" "f[642]" "f[643]" "f[644]" "f[645]" "f[646]" "f[647]" "f[648]" "f[649]" "f[650]" "f[651]" "f[652]" "f[653]" "f[654]" "f[655]" "f[656]" "f[657]" "f[658]" "f[659]" "f[660]" "f[661]" "f[662]" "f[663]" "f[664]" "f[665]" "f[666]" "f[667]" "f[668]" "f[669]" "f[670]" "f[671]" "f[672]" "f[673]" "f[674]" "f[675]" "f[676]" "f[677]" "f[678]" "f[679]" "f[680]" "f[681]" "f[682]" "f[683]" "f[684]" "f[685]" "f[686]" "f[687]" "f[688]" "f[689]" "f[690]" "f[691]" "f[692]" "f[693]" "f[694]" "f[695]" "f[696]" "f[697]" "f[698]" "f[699]" "f[700]" "f[701]" "f[702]" "f[703]" "f[704]" "f[705]" "f[706]" "f[707]" "f[708]" "f[709]" "f[710]" "f[711]" "f[712]" "f[713]" "f[714]" "f[715]" "f[716]" "f[717]" "f[718]" "f[719]" "f[720]" "f[721]" "f[722]" "f[723]" "f[724]" "f[725]" "f[726]" "f[727]" "f[728]" "f[729]" "f[730]" "f[731]" "f[732]" "f[733]" "f[734]" "f[735]" "f[736]" "f[737]" "f[738]" "f[739]" "f[740]" "f[741]" "f[742]" "f[743]" "f[744]" "f[745]" "f[746]" "f[747]" "f[748]" "f[749]" "f[750]" "f[751]" "f[752]" "f[753]" "f[754]" "f[755]" "f[756]" "f[757]" "f[758]" "f[759]" "f[760]" "f[761]" "f[762]" "f[763]" "f[764]" "f[765]" "f[766]" "f[767]" "f[768]" "f[769]" "f[770]" "f[771]" "f[772]" "f[773]" "f[774]" "f[775]" "f[776]" "f[777]" "f[778]" "f[779]" "f[780]" "f[781]" "f[782]" "f[783]" "f[784]" "f[785]" "f[786]" "f[787]" "f[788]" "f[789]" "f[790]" "f[791]" "f[792]" "f[793]" "f[794]" "f[795]" "f[796]" "f[797]" "f[798]" "f[799]" "f[800]" "f[801]" "f[802]" "f[803]" "f[804]" "f[805]" "f[806]" "f[807]" "f[808]" "f[809]" "f[810]" "f[811]" "f[812]" "f[813]" "f[814]" "f[815]" "f[816]" "f[817]" "f[818]" "f[819]" "f[820]" "f[821]" "f[822]" "f[823]" "f[824]" "f[825]" "f[826]" "f[827]" "f[828]" "f[829]" "f[830]" "f[831]" "f[832]" "f[833]" "f[834]" "f[835]" "f[836]" "f[837]" "f[838]" "f[839]" "f[840]" "f[841]" "f[842]" "f[843]" "f[844]" "f[845]" "f[846]" "f[847]" "f[848]" "f[849]" "f[850]" "f[851]" "f[852]" "f[853]" "f[854]" "f[855]";
+createNode polyUnite -n "polyUnite8";
+	rename -uid "8CA83D7E-461A-CE53-F21B-FAB86681BB6C";
+	setAttr -s 2 ".ip";
+	setAttr -s 2 ".im";
+createNode groupId -n "groupId37";
+	rename -uid "8CF5C833-4A84-0BBF-B686-08B6B26B2BC9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts25";
+	rename -uid "E5EA68D9-4AC5-930B-3556-27B70DE2AA55";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:1621]";
+createNode polySeparate -n "polySeparate6";
+	rename -uid "98922706-4D9D-66C6-74CB-6DBB1724684D";
+	setAttr ".ic" 2;
+	setAttr -s 2 ".out";
+createNode groupId -n "groupId38";
+	rename -uid "6A44F9C3-409A-72CD-2ADC-FAB6208FCBE3";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts26";
+	rename -uid "88ABC904-45EB-E150-41E8-C7B1025B9A04";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 766 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]" "f[354]" "f[355]" "f[356]" "f[357]" "f[358]" "f[359]" "f[360]" "f[361]" "f[362]" "f[363]" "f[364]" "f[365]" "f[366]" "f[367]" "f[368]" "f[369]" "f[370]" "f[371]" "f[372]" "f[373]" "f[374]" "f[375]" "f[376]" "f[377]" "f[378]" "f[379]" "f[380]" "f[381]" "f[382]" "f[383]" "f[384]" "f[385]" "f[386]" "f[387]" "f[388]" "f[389]" "f[390]" "f[391]" "f[392]" "f[393]" "f[394]" "f[395]" "f[396]" "f[397]" "f[398]" "f[399]" "f[400]" "f[401]" "f[402]" "f[403]" "f[404]" "f[405]" "f[406]" "f[407]" "f[408]" "f[409]" "f[410]" "f[411]" "f[412]" "f[413]" "f[414]" "f[415]" "f[416]" "f[417]" "f[418]" "f[419]" "f[420]" "f[421]" "f[422]" "f[423]" "f[424]" "f[425]" "f[426]" "f[427]" "f[428]" "f[429]" "f[430]" "f[431]" "f[432]" "f[433]" "f[434]" "f[435]" "f[436]" "f[437]" "f[438]" "f[439]" "f[440]" "f[441]" "f[442]" "f[443]" "f[444]" "f[445]" "f[446]" "f[447]" "f[448]" "f[449]" "f[450]" "f[451]" "f[452]" "f[453]" "f[454]" "f[455]" "f[456]" "f[457]" "f[458]" "f[459]" "f[460]" "f[461]" "f[462]" "f[463]" "f[464]" "f[465]" "f[466]" "f[467]" "f[468]" "f[469]" "f[470]" "f[471]" "f[472]" "f[473]" "f[474]" "f[475]" "f[476]" "f[477]" "f[478]" "f[479]" "f[480]" "f[481]" "f[482]" "f[483]" "f[484]" "f[485]" "f[486]" "f[487]" "f[488]" "f[489]" "f[490]" "f[491]" "f[492]" "f[493]" "f[494]" "f[495]" "f[496]" "f[497]" "f[498]" "f[499]" "f[500]" "f[501]" "f[502]" "f[503]" "f[504]" "f[505]" "f[506]" "f[507]" "f[508]" "f[509]" "f[510]" "f[511]" "f[512]" "f[513]" "f[514]" "f[515]" "f[516]" "f[517]" "f[518]" "f[519]" "f[520]" "f[521]" "f[522]" "f[523]" "f[524]" "f[525]" "f[526]" "f[527]" "f[528]" "f[529]" "f[530]" "f[531]" "f[532]" "f[533]" "f[534]" "f[535]" "f[536]" "f[537]" "f[538]" "f[539]" "f[540]" "f[541]" "f[542]" "f[543]" "f[544]" "f[545]" "f[546]" "f[547]" "f[548]" "f[549]" "f[550]" "f[551]" "f[552]" "f[553]" "f[554]" "f[555]" "f[556]" "f[557]" "f[558]" "f[559]" "f[560]" "f[561]" "f[562]" "f[563]" "f[564]" "f[565]" "f[566]" "f[567]" "f[568]" "f[569]" "f[570]" "f[571]" "f[572]" "f[573]" "f[574]" "f[575]" "f[576]" "f[577]" "f[578]" "f[579]" "f[580]" "f[581]" "f[582]" "f[583]" "f[584]" "f[585]" "f[586]" "f[587]" "f[588]" "f[589]" "f[590]" "f[591]" "f[592]" "f[593]" "f[594]" "f[595]" "f[596]" "f[597]" "f[598]" "f[599]" "f[600]" "f[601]" "f[602]" "f[603]" "f[604]" "f[605]" "f[606]" "f[607]" "f[608]" "f[609]" "f[610]" "f[611]" "f[612]" "f[613]" "f[614]" "f[615]" "f[616]" "f[617]" "f[618]" "f[619]" "f[620]" "f[621]" "f[622]" "f[623]" "f[624]" "f[625]" "f[626]" "f[627]" "f[628]" "f[629]" "f[630]" "f[631]" "f[632]" "f[633]" "f[634]" "f[635]" "f[636]" "f[637]" "f[638]" "f[639]" "f[640]" "f[641]" "f[642]" "f[643]" "f[644]" "f[645]" "f[646]" "f[647]" "f[648]" "f[649]" "f[650]" "f[651]" "f[652]" "f[653]" "f[654]" "f[655]" "f[656]" "f[657]" "f[658]" "f[659]" "f[660]" "f[661]" "f[662]" "f[663]" "f[664]" "f[665]" "f[666]" "f[667]" "f[668]" "f[669]" "f[670]" "f[671]" "f[672]" "f[673]" "f[674]" "f[675]" "f[676]" "f[677]" "f[678]" "f[679]" "f[680]" "f[681]" "f[682]" "f[683]" "f[684]" "f[685]" "f[686]" "f[687]" "f[688]" "f[689]" "f[690]" "f[691]" "f[692]" "f[693]" "f[694]" "f[695]" "f[696]" "f[697]" "f[698]" "f[699]" "f[700]" "f[701]" "f[702]" "f[703]" "f[704]" "f[705]" "f[706]" "f[707]" "f[708]" "f[709]" "f[710]" "f[711]" "f[712]" "f[713]" "f[714]" "f[715]" "f[716]" "f[717]" "f[718]" "f[719]" "f[720]" "f[721]" "f[722]" "f[723]" "f[724]" "f[725]" "f[726]" "f[727]" "f[728]" "f[729]" "f[730]" "f[731]" "f[732]" "f[733]" "f[734]" "f[735]" "f[736]" "f[737]" "f[738]" "f[739]" "f[740]" "f[741]" "f[742]" "f[743]" "f[744]" "f[745]" "f[746]" "f[747]" "f[748]" "f[749]" "f[750]" "f[751]" "f[752]" "f[753]" "f[754]" "f[755]" "f[756]" "f[757]" "f[758]" "f[759]" "f[760]" "f[761]" "f[762]" "f[763]" "f[764]" "f[765]";
+createNode groupId -n "groupId39";
+	rename -uid "D1657856-46D4-74DE-C725-FD9301D8780F";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts27";
+	rename -uid "BF15BAE1-4238-1511-B900-0089B250D963";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 856 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]" "f[354]" "f[355]" "f[356]" "f[357]" "f[358]" "f[359]" "f[360]" "f[361]" "f[362]" "f[363]" "f[364]" "f[365]" "f[366]" "f[367]" "f[368]" "f[369]" "f[370]" "f[371]" "f[372]" "f[373]" "f[374]" "f[375]" "f[376]" "f[377]" "f[378]" "f[379]" "f[380]" "f[381]" "f[382]" "f[383]" "f[384]" "f[385]" "f[386]" "f[387]" "f[388]" "f[389]" "f[390]" "f[391]" "f[392]" "f[393]" "f[394]" "f[395]" "f[396]" "f[397]" "f[398]" "f[399]" "f[400]" "f[401]" "f[402]" "f[403]" "f[404]" "f[405]" "f[406]" "f[407]" "f[408]" "f[409]" "f[410]" "f[411]" "f[412]" "f[413]" "f[414]" "f[415]" "f[416]" "f[417]" "f[418]" "f[419]" "f[420]" "f[421]" "f[422]" "f[423]" "f[424]" "f[425]" "f[426]" "f[427]" "f[428]" "f[429]" "f[430]" "f[431]" "f[432]" "f[433]" "f[434]" "f[435]" "f[436]" "f[437]" "f[438]" "f[439]" "f[440]" "f[441]" "f[442]" "f[443]" "f[444]" "f[445]" "f[446]" "f[447]" "f[448]" "f[449]" "f[450]" "f[451]" "f[452]" "f[453]" "f[454]" "f[455]" "f[456]" "f[457]" "f[458]" "f[459]" "f[460]" "f[461]" "f[462]" "f[463]" "f[464]" "f[465]" "f[466]" "f[467]" "f[468]" "f[469]" "f[470]" "f[471]" "f[472]" "f[473]" "f[474]" "f[475]" "f[476]" "f[477]" "f[478]" "f[479]" "f[480]" "f[481]" "f[482]" "f[483]" "f[484]" "f[485]" "f[486]" "f[487]" "f[488]" "f[489]" "f[490]" "f[491]" "f[492]" "f[493]" "f[494]" "f[495]" "f[496]" "f[497]" "f[498]" "f[499]" "f[500]" "f[501]" "f[502]" "f[503]" "f[504]" "f[505]" "f[506]" "f[507]" "f[508]" "f[509]" "f[510]" "f[511]" "f[512]" "f[513]" "f[514]" "f[515]" "f[516]" "f[517]" "f[518]" "f[519]" "f[520]" "f[521]" "f[522]" "f[523]" "f[524]" "f[525]" "f[526]" "f[527]" "f[528]" "f[529]" "f[530]" "f[531]" "f[532]" "f[533]" "f[534]" "f[535]" "f[536]" "f[537]" "f[538]" "f[539]" "f[540]" "f[541]" "f[542]" "f[543]" "f[544]" "f[545]" "f[546]" "f[547]" "f[548]" "f[549]" "f[550]" "f[551]" "f[552]" "f[553]" "f[554]" "f[555]" "f[556]" "f[557]" "f[558]" "f[559]" "f[560]" "f[561]" "f[562]" "f[563]" "f[564]" "f[565]" "f[566]" "f[567]" "f[568]" "f[569]" "f[570]" "f[571]" "f[572]" "f[573]" "f[574]" "f[575]" "f[576]" "f[577]" "f[578]" "f[579]" "f[580]" "f[581]" "f[582]" "f[583]" "f[584]" "f[585]" "f[586]" "f[587]" "f[588]" "f[589]" "f[590]" "f[591]" "f[592]" "f[593]" "f[594]" "f[595]" "f[596]" "f[597]" "f[598]" "f[599]" "f[600]" "f[601]" "f[602]" "f[603]" "f[604]" "f[605]" "f[606]" "f[607]" "f[608]" "f[609]" "f[610]" "f[611]" "f[612]" "f[613]" "f[614]" "f[615]" "f[616]" "f[617]" "f[618]" "f[619]" "f[620]" "f[621]" "f[622]" "f[623]" "f[624]" "f[625]" "f[626]" "f[627]" "f[628]" "f[629]" "f[630]" "f[631]" "f[632]" "f[633]" "f[634]" "f[635]" "f[636]" "f[637]" "f[638]" "f[639]" "f[640]" "f[641]" "f[642]" "f[643]" "f[644]" "f[645]" "f[646]" "f[647]" "f[648]" "f[649]" "f[650]" "f[651]" "f[652]" "f[653]" "f[654]" "f[655]" "f[656]" "f[657]" "f[658]" "f[659]" "f[660]" "f[661]" "f[662]" "f[663]" "f[664]" "f[665]" "f[666]" "f[667]" "f[668]" "f[669]" "f[670]" "f[671]" "f[672]" "f[673]" "f[674]" "f[675]" "f[676]" "f[677]" "f[678]" "f[679]" "f[680]" "f[681]" "f[682]" "f[683]" "f[684]" "f[685]" "f[686]" "f[687]" "f[688]" "f[689]" "f[690]" "f[691]" "f[692]" "f[693]" "f[694]" "f[695]" "f[696]" "f[697]" "f[698]" "f[699]" "f[700]" "f[701]" "f[702]" "f[703]" "f[704]" "f[705]" "f[706]" "f[707]" "f[708]" "f[709]" "f[710]" "f[711]" "f[712]" "f[713]" "f[714]" "f[715]" "f[716]" "f[717]" "f[718]" "f[719]" "f[720]" "f[721]" "f[722]" "f[723]" "f[724]" "f[725]" "f[726]" "f[727]" "f[728]" "f[729]" "f[730]" "f[731]" "f[732]" "f[733]" "f[734]" "f[735]" "f[736]" "f[737]" "f[738]" "f[739]" "f[740]" "f[741]" "f[742]" "f[743]" "f[744]" "f[745]" "f[746]" "f[747]" "f[748]" "f[749]" "f[750]" "f[751]" "f[752]" "f[753]" "f[754]" "f[755]" "f[756]" "f[757]" "f[758]" "f[759]" "f[760]" "f[761]" "f[762]" "f[763]" "f[764]" "f[765]" "f[766]" "f[767]" "f[768]" "f[769]" "f[770]" "f[771]" "f[772]" "f[773]" "f[774]" "f[775]" "f[776]" "f[777]" "f[778]" "f[779]" "f[780]" "f[781]" "f[782]" "f[783]" "f[784]" "f[785]" "f[786]" "f[787]" "f[788]" "f[789]" "f[790]" "f[791]" "f[792]" "f[793]" "f[794]" "f[795]" "f[796]" "f[797]" "f[798]" "f[799]" "f[800]" "f[801]" "f[802]" "f[803]" "f[804]" "f[805]" "f[806]" "f[807]" "f[808]" "f[809]" "f[810]" "f[811]" "f[812]" "f[813]" "f[814]" "f[815]" "f[816]" "f[817]" "f[818]" "f[819]" "f[820]" "f[821]" "f[822]" "f[823]" "f[824]" "f[825]" "f[826]" "f[827]" "f[828]" "f[829]" "f[830]" "f[831]" "f[832]" "f[833]" "f[834]" "f[835]" "f[836]" "f[837]" "f[838]" "f[839]" "f[840]" "f[841]" "f[842]" "f[843]" "f[844]" "f[845]" "f[846]" "f[847]" "f[848]" "f[849]" "f[850]" "f[851]" "f[852]" "f[853]" "f[854]" "f[855]";
+createNode polyUnite -n "polyUnite9";
+	rename -uid "CC721FD0-4EE5-9B3C-7D48-2CBFDB7C5F4C";
+	setAttr -s 2 ".ip";
+	setAttr -s 2 ".im";
+createNode groupId -n "groupId40";
+	rename -uid "81B6B1C3-4169-912C-2949-2881B1021594";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts28";
+	rename -uid "CB96A891-4CE9-AEEA-4859-2EA81FC197A6";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:1621]";
+createNode polyMergeVert -n "polyMergeVert88";
+	rename -uid "C5E7223F-44E1-3CD0-56BD-8CA8780677AB";
+	setAttr ".ics" -type "componentList" 2 "vtx[11]" "vtx[1674]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert89";
+	rename -uid "840B41AF-4994-E99D-0909-E6BF80DF921E";
+	setAttr ".ics" -type "componentList" 2 "vtx[2]" "vtx[1673]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert90";
+	rename -uid "8D08E093-4200-EA6D-E15A-A1B6F04C08DB";
+	setAttr ".ics" -type "componentList" 2 "vtx[3]" "vtx[1672]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert91";
+	rename -uid "D078E90A-4595-25A9-831B-1188CC939A03";
+	setAttr ".ics" -type "componentList" 2 "vtx[7]" "vtx[1671]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert92";
+	rename -uid "A91B2724-4666-1F63-5BCD-C887B14A3A17";
+	setAttr ".ics" -type "componentList" 2 "vtx[9]" "vtx[1670]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert93";
+	rename -uid "6E34995F-4DFC-0EF5-2871-F399733A198D";
+	setAttr ".ics" -type "componentList" 2 "vtx[169]" "vtx[1670]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert94";
+	rename -uid "E31C21FA-4914-7E7B-3EE9-DF89FCED978F";
+	setAttr ".ics" -type "componentList" 2 "vtx[170]" "vtx[1670]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert95";
+	rename -uid "EDC70D63-4F97-EF90-0EDA-12AC1C5D6BC4";
+	setAttr ".ics" -type "componentList" 2 "vtx[172]" "vtx[1670]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode deleteComponent -n "deleteComponent55";
+	rename -uid "01454D0F-4E05-C9ED-C753-A4B66EBADCA9";
+	setAttr ".dc" -type "componentList" 1 "e[302]";
+createNode deleteComponent -n "deleteComponent56";
+	rename -uid "19446D5E-4EFA-3618-E697-1A84E271FE4B";
+	setAttr ".dc" -type "componentList" 5 "vtx[172]" "vtx[174]" "vtx[920]" "vtx[1023]" "vtx[1028]";
+createNode polyMergeVert -n "polyMergeVert96";
+	rename -uid "E46EE4E5-40AF-26B3-6A65-F7BA0736FBFB";
+	setAttr ".ics" -type "componentList" 2 "vtx[175]" "vtx[1681]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyTweak -n "polyTweak63";
+	rename -uid "D7F458E6-49B2-3F21-C4FA-009B8721831A";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[175]" -type "float3" 0.038901884 0.26174307 0.041074403 ;
+createNode polyMergeVert -n "polyMergeVert97";
+	rename -uid "A91C3F4F-4575-73EC-7553-0EB93C4D0E0A";
+	setAttr ".ics" -type "componentList" 2 "vtx[416]" "vtx[1669]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyTweak -n "polyTweak64";
+	rename -uid "EDE1C134-439F-E870-7B3C-89923FDAAAB2";
+	setAttr ".uopa" yes;
+	setAttr -s 3 ".tk";
+	setAttr ".tk[416]" -type "float3" 0 -0.088471167 -0.21975356 ;
+createNode polyMergeVert -n "polyMergeVert98";
+	rename -uid "1D59D4FE-4A72-83D4-B9A6-318A31B354FC";
+	setAttr ".ics" -type "componentList" 2 "vtx[414]" "vtx[1669]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyTweak -n "polyTweak65";
+	rename -uid "DE84A5E0-4BC2-2317-3E8F-2DB4F61AA9A2";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[412]" -type "float3" 0 0.1116177 -0.37248206 ;
+	setAttr ".tk[414]" -type "float3" 0 0.1116177 -0.37248206 ;
+createNode polyMergeVert -n "polyMergeVert99";
+	rename -uid "11AFB0FE-496A-CD85-FB44-ADA1F6AD3088";
+	setAttr ".ics" -type "componentList" 2 "vtx[410]" "vtx[1670]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyTweak -n "polyTweak66";
+	rename -uid "097A62BC-4758-6EF1-3944-9D94B623D5C6";
+	setAttr ".uopa" yes;
+	setAttr -s 3 ".tk";
+	setAttr ".tk[410]" -type "float3" -0.059249785 0 -0.4861488 ;
+createNode polyMergeVert -n "polyMergeVert100";
+	rename -uid "EE038476-4D0F-5A51-A1FA-88A7D864D8E4";
+	setAttr ".ics" -type "componentList" 2 "vtx[409]" "vtx[1670]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyTweak -n "polyTweak67";
+	rename -uid "0DE23C36-42CF-7BAA-4714-DBB5EC34BCC1";
+	setAttr ".uopa" yes;
+	setAttr -s 3 ".tk";
+	setAttr ".tk[409]" -type "float3" 0.29324299 0 -0.53191483 ;
+createNode polyMergeVert -n "polyMergeVert101";
+	rename -uid "A130D022-463D-7C26-B811-76A488AF3436";
+	setAttr ".ics" -type "componentList" 2 "vtx[418]" "vtx[1670]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyTweak -n "polyTweak68";
+	rename -uid "A95C699D-462E-42FA-5380-A6996F97B5F8";
+	setAttr ".uopa" yes;
+	setAttr -s 3 ".tk";
+	setAttr ".tk[418]" -type "float3" 0.02746043 0 -0.56476307 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -67961,9 +68387,9 @@ select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 34 ".dsm";
+	setAttr -s 41 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 30 ".gn";
+	setAttr -s 37 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultResolution;
@@ -68067,9 +68493,34 @@ connectAttr ":initialShadingGroup.mwc" "polySurfaceShape14.iog.og[0].gco";
 connectAttr "groupParts17.og" "polySurface11Shape.i";
 connectAttr "groupId30.id" "polySurface11Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurface11Shape.iog.og[0].gco";
-connectAttr "polyBridgeEdge97.out" "polySurface13Shape.i";
-connectAttr "groupId33.id" "polySurface13Shape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurface13Shape.iog.og[0].gco";
+connectAttr "polySplit54.out" "|polySurface13|transform20|polySurface13Shape.i";
+connectAttr "groupId33.id" "|polySurface13|transform20|polySurface13Shape.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|polySurface13|transform20|polySurface13Shape.iog.og[0].gco"
+		;
+connectAttr "groupParts23.og" "polySurfaceShape15.i";
+connectAttr "groupId35.id" "polySurfaceShape15.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurfaceShape15.iog.og[0].gco";
+connectAttr "groupParts24.og" "polySurfaceShape16.i";
+connectAttr "groupId36.id" "polySurfaceShape16.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurfaceShape16.iog.og[0].gco";
+connectAttr "groupParts22.og" "|polySurface14|transform21|polySurface13Shape.i";
+connectAttr "groupId34.id" "|polySurface14|transform21|polySurface13Shape.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|polySurface14|transform21|polySurface13Shape.iog.og[0].gco"
+		;
+connectAttr "groupParts26.og" "polySurfaceShape17.i";
+connectAttr "groupId38.id" "polySurfaceShape17.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurfaceShape17.iog.og[0].gco";
+connectAttr "groupParts27.og" "polySurfaceShape18.i";
+connectAttr "groupId39.id" "polySurfaceShape18.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurfaceShape18.iog.og[0].gco";
+connectAttr "groupParts25.og" "polySurface15Shape.i";
+connectAttr "groupId37.id" "polySurface15Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurface15Shape.iog.og[0].gco";
+connectAttr "polyMergeVert101.out" "polySurface17Shape.i";
+connectAttr "groupId40.id" "polySurface17Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurface17Shape.iog.og[0].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Cat:catSG.message" ":defaultLightSet.message";
@@ -68577,190 +69028,366 @@ connectAttr "polySurfaceShape13.o" "polyUnite6.ip[1]";
 connectAttr "polySurfaceShape14.wm" "polyUnite6.im[0]";
 connectAttr "polySurfaceShape13.wm" "polyUnite6.im[1]";
 connectAttr "polyUnite6.out" "groupParts20.ig";
-connectAttr "groupId33.id" "groupParts20.gi";
 connectAttr "groupParts20.og" "polyBridgeEdge8.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge8.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge8.mp"
+		;
 connectAttr "polyTweak60.out" "polyBridgeEdge9.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge9.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge9.mp"
+		;
 connectAttr "polyBridgeEdge8.out" "polyTweak60.ip";
 connectAttr "polyBridgeEdge9.out" "polyBridgeEdge10.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge10.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge10.mp"
+		;
 connectAttr "polyBridgeEdge10.out" "polyBridgeEdge11.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge11.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge11.mp"
+		;
 connectAttr "polyBridgeEdge11.out" "polyBridgeEdge12.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge12.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge12.mp"
+		;
 connectAttr "polyBridgeEdge12.out" "polyBridgeEdge13.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge13.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge13.mp"
+		;
 connectAttr "polyBridgeEdge13.out" "polyBridgeEdge14.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge14.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge14.mp"
+		;
 connectAttr "polyBridgeEdge14.out" "polyBridgeEdge15.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge15.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge15.mp"
+		;
 connectAttr "polyBridgeEdge15.out" "polyBridgeEdge16.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge16.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge16.mp"
+		;
 connectAttr "polyBridgeEdge16.out" "polyBridgeEdge17.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge17.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge17.mp"
+		;
 connectAttr "polyBridgeEdge17.out" "polyBridgeEdge18.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge18.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge18.mp"
+		;
 connectAttr "polyBridgeEdge18.out" "polyBridgeEdge19.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge19.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge19.mp"
+		;
 connectAttr "polyBridgeEdge19.out" "polyBridgeEdge20.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge20.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge20.mp"
+		;
 connectAttr "polyBridgeEdge20.out" "polyBridgeEdge21.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge21.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge21.mp"
+		;
 connectAttr "polyBridgeEdge21.out" "polyBridgeEdge22.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge22.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge22.mp"
+		;
 connectAttr "polyBridgeEdge22.out" "polyBridgeEdge23.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge23.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge23.mp"
+		;
 connectAttr "polyBridgeEdge23.out" "polyBridgeEdge24.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge24.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge24.mp"
+		;
 connectAttr "polyBridgeEdge24.out" "polyBridgeEdge25.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge25.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge25.mp"
+		;
 connectAttr "polyBridgeEdge25.out" "polyBridgeEdge26.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge26.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge26.mp"
+		;
 connectAttr "polyBridgeEdge26.out" "polyBridgeEdge27.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge27.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge27.mp"
+		;
 connectAttr "polyBridgeEdge27.out" "polyBridgeEdge28.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge28.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge28.mp"
+		;
 connectAttr "polyBridgeEdge28.out" "polyBridgeEdge29.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge29.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge29.mp"
+		;
 connectAttr "polyBridgeEdge29.out" "polyBridgeEdge30.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge30.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge30.mp"
+		;
 connectAttr "polyBridgeEdge30.out" "polyBridgeEdge31.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge31.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge31.mp"
+		;
 connectAttr "polyBridgeEdge31.out" "polyBridgeEdge32.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge32.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge32.mp"
+		;
 connectAttr "polyBridgeEdge32.out" "polyBridgeEdge33.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge33.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge33.mp"
+		;
 connectAttr "polyBridgeEdge33.out" "polyBridgeEdge34.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge34.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge34.mp"
+		;
 connectAttr "polyBridgeEdge34.out" "polyBevel1.ip";
-connectAttr "polySurface13Shape.wm" "polyBevel1.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBevel1.mp";
 connectAttr "polyBevel1.out" "polyBridgeEdge35.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge35.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge35.mp"
+		;
 connectAttr "polyBridgeEdge35.out" "polyBridgeEdge36.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge36.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge36.mp"
+		;
 connectAttr "polyBridgeEdge36.out" "polyBridgeEdge37.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge37.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge37.mp"
+		;
 connectAttr "polyBridgeEdge37.out" "polyBridgeEdge38.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge38.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge38.mp"
+		;
 connectAttr "polyBridgeEdge38.out" "polyBridgeEdge39.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge39.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge39.mp"
+		;
 connectAttr "polyBridgeEdge39.out" "polyBridgeEdge40.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge40.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge40.mp"
+		;
 connectAttr "polyBridgeEdge40.out" "polyBridgeEdge41.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge41.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge41.mp"
+		;
 connectAttr "polyBridgeEdge41.out" "polyBridgeEdge42.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge42.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge42.mp"
+		;
 connectAttr "polyBridgeEdge42.out" "polyBridgeEdge43.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge43.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge43.mp"
+		;
 connectAttr "polyBridgeEdge43.out" "polyBridgeEdge44.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge44.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge44.mp"
+		;
 connectAttr "polyBridgeEdge44.out" "polyBridgeEdge45.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge45.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge45.mp"
+		;
 connectAttr "polyBridgeEdge45.out" "polyBridgeEdge46.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge46.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge46.mp"
+		;
 connectAttr "polyBridgeEdge46.out" "polyBridgeEdge47.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge47.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge47.mp"
+		;
 connectAttr "polyBridgeEdge47.out" "polyBridgeEdge48.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge48.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge48.mp"
+		;
 connectAttr "polyBridgeEdge48.out" "polyBridgeEdge49.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge49.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge49.mp"
+		;
 connectAttr "polyBridgeEdge49.out" "polyBridgeEdge50.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge50.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge50.mp"
+		;
 connectAttr "polyBridgeEdge50.out" "polyBridgeEdge51.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge51.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge51.mp"
+		;
 connectAttr "polyBridgeEdge51.out" "polyBridgeEdge52.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge52.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge52.mp"
+		;
 connectAttr "polyBridgeEdge52.out" "polyBridgeEdge53.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge53.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge53.mp"
+		;
 connectAttr "polyBridgeEdge53.out" "polyBridgeEdge54.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge54.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge54.mp"
+		;
 connectAttr "polyBridgeEdge54.out" "polyBridgeEdge55.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge55.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge55.mp"
+		;
 connectAttr "polyBridgeEdge55.out" "polyBridgeEdge56.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge56.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge56.mp"
+		;
 connectAttr "polyBridgeEdge56.out" "polyBridgeEdge57.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge57.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge57.mp"
+		;
 connectAttr "polyBridgeEdge57.out" "polyBridgeEdge58.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge58.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge58.mp"
+		;
 connectAttr "polyBridgeEdge58.out" "polyBridgeEdge59.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge59.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge59.mp"
+		;
 connectAttr "polyBridgeEdge59.out" "polyBridgeEdge60.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge60.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge60.mp"
+		;
 connectAttr "polyBridgeEdge60.out" "polyBridgeEdge61.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge61.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge61.mp"
+		;
 connectAttr "polyBridgeEdge61.out" "polyBridgeEdge62.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge62.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge62.mp"
+		;
 connectAttr "polyBridgeEdge62.out" "polyBridgeEdge63.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge63.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge63.mp"
+		;
 connectAttr "polyBridgeEdge63.out" "polyBridgeEdge64.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge64.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge64.mp"
+		;
 connectAttr "polyBridgeEdge64.out" "polyBridgeEdge65.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge65.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge65.mp"
+		;
 connectAttr "polyBridgeEdge65.out" "polyBridgeEdge66.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge66.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge66.mp"
+		;
 connectAttr "polyBridgeEdge66.out" "polyBridgeEdge67.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge67.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge67.mp"
+		;
 connectAttr "polyBridgeEdge67.out" "polyBridgeEdge68.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge68.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge68.mp"
+		;
 connectAttr "polyBridgeEdge68.out" "polyBridgeEdge69.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge69.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge69.mp"
+		;
 connectAttr "polyBridgeEdge69.out" "polyBridgeEdge70.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge70.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge70.mp"
+		;
 connectAttr "polyBridgeEdge70.out" "polyBridgeEdge71.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge71.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge71.mp"
+		;
 connectAttr "polyBridgeEdge71.out" "polyBridgeEdge72.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge72.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge72.mp"
+		;
 connectAttr "polyBridgeEdge72.out" "polyBridgeEdge73.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge73.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge73.mp"
+		;
 connectAttr "polyBridgeEdge73.out" "polyBridgeEdge74.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge74.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge74.mp"
+		;
 connectAttr "polyBridgeEdge74.out" "polyBridgeEdge75.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge75.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge75.mp"
+		;
 connectAttr "polyBridgeEdge75.out" "polyBridgeEdge76.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge76.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge76.mp"
+		;
 connectAttr "polyBridgeEdge76.out" "polyBridgeEdge77.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge77.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge77.mp"
+		;
 connectAttr "polyBridgeEdge77.out" "polyBridgeEdge78.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge78.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge78.mp"
+		;
 connectAttr "polyBridgeEdge78.out" "polyBridgeEdge79.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge79.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge79.mp"
+		;
 connectAttr "polyBridgeEdge79.out" "polyBridgeEdge80.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge80.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge80.mp"
+		;
 connectAttr "polyBridgeEdge80.out" "polyBridgeEdge81.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge81.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge81.mp"
+		;
 connectAttr "polyBridgeEdge81.out" "polyBridgeEdge82.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge82.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge82.mp"
+		;
 connectAttr "polyBridgeEdge82.out" "polyBridgeEdge83.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge83.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge83.mp"
+		;
 connectAttr "polyBridgeEdge83.out" "polyBridgeEdge84.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge84.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge84.mp"
+		;
 connectAttr "polyBridgeEdge84.out" "polyBridgeEdge85.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge85.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge85.mp"
+		;
 connectAttr "polyBridgeEdge85.out" "polyBridgeEdge86.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge86.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge86.mp"
+		;
 connectAttr "polyBridgeEdge86.out" "polyBridgeEdge87.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge87.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge87.mp"
+		;
 connectAttr "polyBridgeEdge87.out" "polyBridgeEdge88.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge88.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge88.mp"
+		;
 connectAttr "polyBridgeEdge88.out" "polyBridgeEdge89.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge89.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge89.mp"
+		;
 connectAttr "polyBridgeEdge89.out" "polyBridgeEdge90.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge90.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge90.mp"
+		;
 connectAttr "polyBridgeEdge90.out" "polyBridgeEdge91.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge91.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge91.mp"
+		;
 connectAttr "polyBridgeEdge91.out" "polyBridgeEdge92.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge92.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge92.mp"
+		;
 connectAttr "polyBridgeEdge92.out" "polyBridgeEdge93.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge93.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge93.mp"
+		;
 connectAttr "polyBridgeEdge93.out" "polyBridgeEdge94.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge94.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge94.mp"
+		;
 connectAttr "polyBridgeEdge94.out" "polyBridgeEdge95.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge95.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge95.mp"
+		;
 connectAttr "polyBridgeEdge95.out" "polyBridgeEdge96.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge96.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge96.mp"
+		;
 connectAttr "polyBridgeEdge96.out" "polyBridgeEdge97.ip";
-connectAttr "polySurface13Shape.wm" "polyBridgeEdge97.mp";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge97.mp"
+		;
+connectAttr "polyBridgeEdge97.out" "polyBridgeEdge98.ip";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge98.mp"
+		;
+connectAttr "polyBridgeEdge98.out" "polyBridgeEdge99.ip";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge99.mp"
+		;
+connectAttr "polyBridgeEdge99.out" "polyBridgeEdge100.ip";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge100.mp"
+		;
+connectAttr "polyBridgeEdge100.out" "polyBridgeEdge101.ip";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyBridgeEdge101.mp"
+		;
+connectAttr "polyTweak61.out" "polyCloseBorder1.ip";
+connectAttr "polyBridgeEdge101.out" "polyTweak61.ip";
+connectAttr "polyCloseBorder1.out" "groupParts21.ig";
+connectAttr "groupId33.id" "groupParts21.gi";
+connectAttr "groupParts21.og" "polyTweak62.ip";
+connectAttr "polyTweak62.out" "polySplit52.ip";
+connectAttr "polySplit52.out" "polySplit53.ip";
+connectAttr "polySplit53.out" "polySplit54.ip";
+connectAttr "|polySurface13|transform20|polySurface13Shape.o" "polyUnite7.ip[0]"
+		;
+connectAttr "polySurfaceShape11.o" "polyUnite7.ip[1]";
+connectAttr "|polySurface13|transform20|polySurface13Shape.wm" "polyUnite7.im[0]"
+		;
+connectAttr "polySurfaceShape11.wm" "polyUnite7.im[1]";
+connectAttr "polyUnite7.out" "groupParts22.ig";
+connectAttr "groupId34.id" "groupParts22.gi";
+connectAttr "|polySurface14|transform21|polySurface13Shape.o" "polySeparate5.ip"
+		;
+connectAttr "polySeparate5.out[0]" "groupParts23.ig";
+connectAttr "groupId35.id" "groupParts23.gi";
+connectAttr "polySeparate5.out[1]" "groupParts24.ig";
+connectAttr "groupId36.id" "groupParts24.gi";
+connectAttr "polySurfaceShape15.o" "polyUnite8.ip[0]";
+connectAttr "polySurfaceShape16.o" "polyUnite8.ip[1]";
+connectAttr "polySurfaceShape15.wm" "polyUnite8.im[0]";
+connectAttr "polySurfaceShape16.wm" "polyUnite8.im[1]";
+connectAttr "polyUnite8.out" "groupParts25.ig";
+connectAttr "groupId37.id" "groupParts25.gi";
+connectAttr "polySurface15Shape.o" "polySeparate6.ip";
+connectAttr "polySeparate6.out[0]" "groupParts26.ig";
+connectAttr "groupId38.id" "groupParts26.gi";
+connectAttr "polySeparate6.out[1]" "groupParts27.ig";
+connectAttr "groupId39.id" "groupParts27.gi";
+connectAttr "polySurfaceShape17.o" "polyUnite9.ip[0]";
+connectAttr "polySurfaceShape18.o" "polyUnite9.ip[1]";
+connectAttr "polySurfaceShape17.wm" "polyUnite9.im[0]";
+connectAttr "polySurfaceShape18.wm" "polyUnite9.im[1]";
+connectAttr "polyUnite9.out" "groupParts28.ig";
+connectAttr "groupId40.id" "groupParts28.gi";
+connectAttr "groupParts28.og" "polyMergeVert88.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert88.mp";
+connectAttr "polyMergeVert88.out" "polyMergeVert89.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert89.mp";
+connectAttr "polyMergeVert89.out" "polyMergeVert90.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert90.mp";
+connectAttr "polyMergeVert90.out" "polyMergeVert91.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert91.mp";
+connectAttr "polyMergeVert91.out" "polyMergeVert92.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert92.mp";
+connectAttr "polyMergeVert92.out" "polyMergeVert93.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert93.mp";
+connectAttr "polyMergeVert93.out" "polyMergeVert94.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert94.mp";
+connectAttr "polyMergeVert94.out" "polyMergeVert95.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert95.mp";
+connectAttr "polyMergeVert95.out" "deleteComponent55.ig";
+connectAttr "deleteComponent55.og" "deleteComponent56.ig";
+connectAttr "polyTweak63.out" "polyMergeVert96.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert96.mp";
+connectAttr "deleteComponent56.og" "polyTweak63.ip";
+connectAttr "polyTweak64.out" "polyMergeVert97.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert97.mp";
+connectAttr "polyMergeVert96.out" "polyTweak64.ip";
+connectAttr "polyTweak65.out" "polyMergeVert98.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert98.mp";
+connectAttr "polyMergeVert97.out" "polyTweak65.ip";
+connectAttr "polyTweak66.out" "polyMergeVert99.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert99.mp";
+connectAttr "polyMergeVert98.out" "polyTweak66.ip";
+connectAttr "polyTweak67.out" "polyMergeVert100.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert100.mp";
+connectAttr "polyMergeVert99.out" "polyTweak67.ip";
+connectAttr "polyTweak68.out" "polyMergeVert101.ip";
+connectAttr "polySurface17Shape.wm" "polyMergeVert101.mp";
+connectAttr "polyMergeVert100.out" "polyTweak68.ip";
 connectAttr "Cat:catSG.pa" ":renderPartition.st" -na;
 connectAttr "Cat:blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "Cat1:catSG.pa" ":renderPartition.st" -na;
@@ -68814,7 +69441,16 @@ connectAttr "polySurfaceShape12.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurface11Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape13.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape14.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurface13Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "|polySurface13|transform20|polySurface13Shape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|polySurface14|transform21|polySurface13Shape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "polySurfaceShape15.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurfaceShape16.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurface15Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurfaceShape17.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurfaceShape18.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurface17Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId5.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
@@ -68845,4 +69481,11 @@ connectAttr "groupId30.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId31.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId32.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId33.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId34.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId35.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId36.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId37.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId38.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId39.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId40.msg" ":initialShadingGroup.gn" -na;
 // End of LeopardSeal.ma
