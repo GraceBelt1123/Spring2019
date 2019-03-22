@@ -7,14 +7,16 @@ public class Dropping : MonoBehaviour
 {
 
     public GameObject drop;
+    public meshRenderer rend;
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {  
-            StartCoroutine(Wait());
+            StartCoroutine(Wait()); 
     }
 
-    IEnumerator Wait()
+    IEnumerator Wait(renderer drop)
     {
+        drop = GetComponent<MeshRenderer>().enabled = true;
         drop.GetComponent<Rigidbody>().useGravity = true;
         print(Time.time);
         yield return new WaitForSeconds(1.4f);
