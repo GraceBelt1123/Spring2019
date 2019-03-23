@@ -67,7 +67,6 @@
      <Compile Include="Assets\Scripts\Healthbar.cs" />
      <Compile Include="Assets\Scripts\hitSlow.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
-     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\pickUp.cs" />
      <Compile Include="Assets\Scripts\SlowEnemyDown.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">

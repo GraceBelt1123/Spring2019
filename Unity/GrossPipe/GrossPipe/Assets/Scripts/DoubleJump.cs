@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoubleJump : MonoBehaviour {
 
-    public float DoubleSpeed = 9;
+    public float DoubleSpeed = 10;
     public Rigidbody RigJump;
     public bool onGrounded = true;
     private const int HighJump = 2;
