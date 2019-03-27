@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: BlueRobot.ma
-//Last modified: Tue, Mar 26, 2019 11:37:31 PM
+//Last modified: Tue, Mar 26, 2019 11:43:15 PM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -63,14 +63,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "DE0149A2-4050-EBD1-2D4B-9FA684E0B107";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1146027233793 5.2619673015777852 -0.37015445713958933 ;
+	setAttr ".t" -type "double3" 1000.1146027233793 10.459954507494354 -0.45583556492942323 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "FC2F7CD1-4636-3F03-9156-D6872D449CD8";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 997.21220863729661;
-	setAttr ".ow" 24.802255972308451;
+	setAttr ".ow" 5.9122288904156228;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -50758,21 +50758,21 @@ createNode joint -n "L_Leg_03_Jnt" -p "L_Leg_02_Jnt";
 	setAttr ".radi" 0.50720948934828725;
 createNode joint -n "joint1";
 	rename -uid "B8B0BD8A-4A29-5B1A-AB33-9D9F0EDC6A06";
-	setAttr ".t" -type "double3" 3.8021624088287354 11.01635649966178 0 ;
+	setAttr ".t" -type "double3" 3.8021624088287354 11.01635649966178 0.25 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -88.445813886481147 ;
 	setAttr ".radi" 0.6158662875086085;
 createNode joint -n "joint2" -p "joint1";
 	rename -uid "40718F87-409F-2035-74C3-EABC4FA0D13B";
-	setAttr ".t" -type "double3" 3.2468522372092936 0.24954293415343498 0 ;
+	setAttr ".t" -type "double3" 3.2468522372092954 0.24954293415350115 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -0.68445345682751069 ;
 	setAttr ".radi" 0.59702381706936114;
 createNode joint -n "joint3" -p "joint2";
 	rename -uid "C132916E-47C8-0729-2C71-96A1DF5CE2BF";
-	setAttr ".t" -type "double3" 2.8796906356820466 0.25669414338881502 0.31235110759735107 ;
+	setAttr ".t" -type "double3" 2.8796906356817527 0.25669414338879459 0.062351107597351074 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 89.130267343308674 ;
