@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: BlueRobot.ma
-//Last modified: Thu, Mar 28, 2019 12:40:43 AM
+//Last modified: Thu, Mar 28, 2019 12:58:47 AM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -15,14 +15,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DB04E300-4D3C-4BB0-DCE5-8192AEF35D23";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.9629896213920102 2.1472289929620647 9.0707783105116064 ;
-	setAttr ".r" -type "double3" -6.3383528192581196 -2533.799999999655 1.023466433548575e-016 ;
+	setAttr ".t" -type "double3" -0.84310780415883047 2.3245058931639102 8.7977907975578606 ;
+	setAttr ".r" -type "double3" 0.26164718056734337 -2892.1999999995928 3.17777769859224e-018 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CC0963B7-4FEE-36D0-55E1-6C9298C5A8DA";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 36.826499438078606;
-	setAttr ".coi" 9.7100482607209226;
+	setAttr ".coi" 9.7100482607207983;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -48,13 +48,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "A3F12BAD-4AAA-BD8C-F97C-8CA8A34E33F0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.7043453489664897 4.1136514943822684 1000.1897986331591 ;
+	setAttr ".t" -type "double3" 1.1567386465427612 2.5652381518327863 1000.1897986331591 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "68C8D286-4CCF-E1F0-43BF-C4A7FCD35040";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1897986331591;
-	setAttr ".ow" 24.157967037051666;
+	setAttr ".ow" 5.4487306476748412;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -47242,7 +47242,7 @@ createNode nurbsSurface -n "L_Front_Hip_Surface_GeoShapeOrig" -p "L_Front_Hip_Su
 		
 		;
 createNode parentConstraint -n "L_Front_Hip_Surface_Geo_parentConstraint1" -p "L_Front_Hip_Surface_Geo";
-	rename -uid "6886172F-4390-4C46-055E-D994FA3D7A3A";
+	rename -uid "C41AF082-4D37-2E26-8FD5-67941BB713BC";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_01_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -47256,15 +47256,14 @@ createNode parentConstraint -n "L_Front_Hip_Surface_Geo_parentConstraint1" -p "L
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -0.0023526104065463294 0.0088825725293768532 
-		-0.0033067963369096121 ;
-	setAttr ".tg[0].tor" -type "double3" 6.3316719456316475e-015 20.997998770930948 
-		84.485721756768342 ;
-	setAttr ".lr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
-	setAttr ".rst" -type "double3" -2.2204460492503131e-016 0 -6.9388939039072284e-017 ;
-	setAttr ".rsrr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
+	setAttr ".tg[0].tot" -type "double3" -0.0023526104065463294 0.0094636465504682743 
+		0.00052382317745641727 ;
+	setAttr ".tg[0].tor" -type "double3" 2.2057471924656391 -2.4902504941612933 84.848053992575942 ;
+	setAttr ".lr" -type "double3" -1.987846675914698e-016 -1.104554188354837e-032 -6.3673213837892666e-015 ;
+	setAttr ".rst" -type "double3" -8.8817841970012523e-016 4.4408920985006262e-016 
+		-6.9388939039072284e-017 ;
+	setAttr ".rsrr" -type "double3" -1.987846675914698e-016 -1.104554188354837e-032 
+		-6.3673213837892666e-015 ;
 	setAttr -k on ".w0";
 createNode transform -n "L_Front_Thigh_Geo" -p "L_Front_Upper_Leg_Geo_Grp";
 	rename -uid "2BFCE7D7-4DA6-7F9A-F6FA-359D2224E4BB";
@@ -47794,7 +47793,7 @@ createNode mesh -n "L_Front_Thigh_GeoShape" -p "L_Front_Thigh_Geo";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode parentConstraint -n "L_Front_Upper_Leg_Geo_Grp_parentConstraint1" -p "L_Front_Upper_Leg_Geo_Grp";
-	rename -uid "91BCF643-40AA-2B71-926E-AD8458B968C7";
+	rename -uid "0A18621D-42EF-E487-02A5-97A5F7D172C1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_01_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -47808,15 +47807,12 @@ createNode parentConstraint -n "L_Front_Upper_Leg_Geo_Grp_parentConstraint1" -p 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 2.7772712250973255 -1.5960701719792953 -0.43227734089260245 ;
-	setAttr ".tg[0].tor" -type "double3" 6.3316719456316475e-015 20.997998770930948 
-		84.485721756768342 ;
-	setAttr ".lr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
-	setAttr ".rst" -type "double3" 2.2204460492503131e-016 -4.4408920985006262e-016 
-		0 ;
-	setAttr ".rsrr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
+	setAttr ".tg[0].tot" -type "double3" 2.7772712250973255 -1.2897450129729171 -1.0348243787438947 ;
+	setAttr ".tg[0].tor" -type "double3" 2.2057471924656391 -2.4902504941612933 84.848053992575942 ;
+	setAttr ".lr" -type "double3" -1.987846675914698e-016 -1.104554188354837e-032 -6.3673213837892666e-015 ;
+	setAttr ".rst" -type "double3" 2.2204460492503131e-016 0 -1.1102230246251565e-016 ;
+	setAttr ".rsrr" -type "double3" -1.987846675914698e-016 -1.104554188354837e-032 
+		-6.3673213837892666e-015 ;
 	setAttr -k on ".w0";
 createNode transform -n "L_Front_Lower_Leg_Geo_Grp" -p "Legs_Geo_Grp";
 	rename -uid "59F6386B-4AEF-16B6-1BAB-BD9626226C05";
@@ -48464,7 +48460,7 @@ createNode nurbsSurface -n "L_Front_Toe_Surface_GeoShapeOrig" -p "L_Front_Toe_Su
 		
 		;
 createNode parentConstraint -n "L_Front_Toe_Surface_Geo_parentConstraint1" -p "L_Front_Toe_Surface_Geo";
-	rename -uid "A978C375-4171-F166-E8C6-E5948EA10922";
+	rename -uid "C81BBE83-4E7F-9B39-F0CA-67B5AB08A98F";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_03_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -48478,15 +48474,13 @@ createNode parentConstraint -n "L_Front_Toe_Surface_Geo_parentConstraint1" -p "L
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -2.7547976816366671e-009 -4.6828027677747741e-008 
-		1.8481727925845348e-008 ;
-	setAttr ".tg[0].tor" -type "double3" 6.3316719456316475e-015 20.997998770930948 
-		84.485721756768342 ;
-	setAttr ".lr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
-	setAttr ".rst" -type "double3" 2.2204460492503131e-016 1.3877787807814457e-017 6.2450045135165055e-017 ;
-	setAttr ".rsrr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
+	setAttr ".tg[0].tot" -type "double3" -2.7547975844921524e-009 0.075686801808251047 
+		-0.045661241690950198 ;
+	setAttr ".tg[0].tor" -type "double3" 2.2057471924656382 -2.4902504941612942 84.848053992575956 ;
+	setAttr ".lr" -type "double3" -1.9878466759146985e-016 1.1053623987365605e-032 6.3719803994359437e-015 ;
+	setAttr ".rst" -type "double3" 0 1.2490009027033011e-016 6.2450045135165055e-017 ;
+	setAttr ".rsrr" -type "double3" -1.9878466759146985e-016 1.1053623987365605e-032 
+		6.3719803994359437e-015 ;
 	setAttr -k on ".w0";
 createNode transform -n "L_Front_Knee_Surface_Geo" -p "L_Front_Lower_Leg_Geo_Grp";
 	rename -uid "40068867-43E8-14C4-C3E4-4A923E09869F";
@@ -48604,7 +48598,7 @@ createNode nurbsSurface -n "L_Front_Knee_Surface_GeoShapeOrig" -p "L_Front_Knee_
 		
 		;
 createNode parentConstraint -n "L_Front_Knee_Surface_Geo_parentConstraint1" -p "L_Front_Knee_Surface_Geo";
-	rename -uid "AC896249-45A4-97E0-A7D7-188943AEA410";
+	rename -uid "63779E8A-4D4F-0D0D-DE50-149DDB575096";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_02_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -48618,18 +48612,16 @@ createNode parentConstraint -n "L_Front_Knee_Surface_Geo_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 3.8445258976338437e-008 1.6608123765138316e-009 
-		-3.4316461894334793e-009 ;
-	setAttr ".tg[0].tor" -type "double3" 6.3316719456316475e-015 20.997998770930948 
-		84.485721756768342 ;
-	setAttr ".lr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
-	setAttr ".rst" -type "double3" 2.2204460492503131e-016 0 0 ;
-	setAttr ".rsrr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
+	setAttr ".tg[0].tot" -type "double3" 3.8445258976338437e-008 0.0063082302801342749 
+		-0.001012172129291361 ;
+	setAttr ".tg[0].tor" -type "double3" 2.2057471924656382 -2.4902504941612942 84.848053992575956 ;
+	setAttr ".lr" -type "double3" -1.9878466759146985e-016 1.1053623987365605e-032 6.3719803994359437e-015 ;
+	setAttr ".rst" -type "double3" 2.2204460492503131e-016 0 2.7755575615628914e-017 ;
+	setAttr ".rsrr" -type "double3" -1.9878466759146985e-016 1.1053623987365605e-032 
+		6.3719803994359437e-015 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "L_Front_Lower_Leg_Geo_Grp_parentConstraint1" -p "L_Front_Lower_Leg_Geo_Grp";
-	rename -uid "7BDB3C88-41A0-2346-99C0-B18C5E39AF80";
+	rename -uid "280EB545-4992-864B-6039-BF914D4700F1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_02_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -48643,15 +48635,12 @@ createNode parentConstraint -n "L_Front_Lower_Leg_Geo_Grp_parentConstraint1" -p 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0.66929815236456458 -1.2108090050762834 -0.31619579956230148 ;
-	setAttr ".tg[0].tor" -type "double3" 6.3316719456316475e-015 20.997998770930948 
-		84.485721756768342 ;
-	setAttr ".lr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
-	setAttr ".rst" -type "double3" 1.1102230246251565e-016 -1.1102230246251565e-016 
-		0 ;
-	setAttr ".rsrr" -type "double3" -3.1805546814635168e-015 -6.3611093629270335e-015 
-		-7.9513867036587909e-016 ;
+	setAttr ".tg[0].tot" -type "double3" 0.66929815236456469 -0.97681363777708641 -0.77529224086027249 ;
+	setAttr ".tg[0].tor" -type "double3" 2.2057471924656382 -2.4902504941612942 84.848053992575956 ;
+	setAttr ".lr" -type "double3" -1.9878466759146985e-016 1.1053623987365605e-032 6.3719803994359437e-015 ;
+	setAttr ".rst" -type "double3" 0 -5.5511151231257827e-016 0 ;
+	setAttr ".rsrr" -type "double3" -1.9878466759146985e-016 1.1053623987365605e-032 
+		6.3719803994359437e-015 ;
 	setAttr -k on ".w0";
 createNode transform -n "R_Front_Upper_Leg_Geo_Grp" -p "Legs_Geo_Grp";
 	rename -uid "52679B47-4040-2BBA-D951-B89116D95284";
@@ -48775,7 +48764,7 @@ createNode nurbsSurface -n "R_Front_Hip_Surface_GeoShapeOrig" -p "R_Front_Hip_Su
 		
 		;
 createNode parentConstraint -n "R_Front_Hip_Surface_Geo_parentConstraint1" -p "R_Front_Hip_Surface_Geo";
-	rename -uid "513BF3B6-48EE-A041-1345-7DBB3F53D7F3";
+	rename -uid "C447D768-4B4F-11F3-5CCF-F195EB1E0B4C";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Leg_01_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -48789,12 +48778,13 @@ createNode parentConstraint -n "R_Front_Hip_Surface_Geo_parentConstraint1" -p "R
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0.0023539506951646416 -0.0088808271995928223 
-		0.0033060577350060849 ;
-	setAttr ".tg[0].tor" -type "double3" -180 20.997998770930987 84.485721756768356 ;
-	setAttr ".lr" -type "double3" -360 1.5902773407317588e-015 2.2069531490250804e-032 ;
-	setAttr ".rst" -type "double3" 0 -4.4408920985006262e-016 5.5511151231257827e-017 ;
-	setAttr ".rsrr" -type "double3" -360 1.5902773407317588e-015 2.2069531490250804e-032 ;
+	setAttr ".tg[0].tot" -type "double3" 0.0023539506951646416 -0.009461751491972592 
+		-0.00052380168038129726 ;
+	setAttr ".tg[0].tor" -type "double3" -177.79425280753438 -2.4902504941612169 84.848053992575942 ;
+	setAttr ".lr" -type "double3" -1.1928050683747912e-015 4.853141298619868e-017 1.2424041724466862e-017 ;
+	setAttr ".rst" -type "double3" 0 0 -6.8001160258290838e-016 ;
+	setAttr ".rsrr" -type "double3" 8.5477407064332019e-015 -1.1927080055488202e-015 
+		1.9083328088781101e-014 ;
 	setAttr -k on ".w0";
 createNode transform -n "R_Front_Thigh_Geo" -p "R_Front_Upper_Leg_Geo_Grp";
 	rename -uid "7FBC0A74-4235-D105-555D-ED9215856E8E";
@@ -49931,7 +49921,7 @@ createNode mesh -n "polySurfaceShape58" -p "R_Front_Thigh_Geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 createNode parentConstraint -n "R_Front_Upper_Leg_Geo_Grp_parentConstraint1" -p "R_Front_Upper_Leg_Geo_Grp";
-	rename -uid "1966E440-4797-9A5A-19D3-4BB933DA6413";
+	rename -uid "B25291BF-4D04-6292-3023-C18489149F10";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Leg_01_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -49945,12 +49935,13 @@ createNode parentConstraint -n "R_Front_Upper_Leg_Geo_Grp_parentConstraint1" -p 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -2.7772698848087072 1.5960719173090789 0.4322766022906982 ;
-	setAttr ".tg[0].tor" -type "double3" -180 20.997998770930987 84.485721756768356 ;
-	setAttr ".lr" -type "double3" -360 1.5902773407317588e-015 2.2069531490250804e-032 ;
-	setAttr ".rst" -type "double3" 2.2204460492503131e-016 -4.4408920985006262e-016 
-		0 ;
-	setAttr ".rsrr" -type "double3" -360 1.5902773407317588e-015 2.2069531490250804e-032 ;
+	setAttr ".tg[0].tot" -type "double3" -2.7772698848087067 1.2897469080314146 1.0348244002409677 ;
+	setAttr ".tg[0].tor" -type "double3" -177.79425280753438 -2.4902504941612169 84.848053992575942 ;
+	setAttr ".lr" -type "double3" -2.1032348423828644 0.184281139777519 -0.10209436191549211 ;
+	setAttr ".rst" -type "double3" 4.4408920985006262e-016 -4.4408920985006262e-016 
+		1.1102230246251565e-016 ;
+	setAttr ".rsrr" -type "double3" 8.5477407064332019e-015 -1.1927080055488202e-015 
+		1.9083328088781101e-014 ;
 	setAttr -k on ".w0";
 createNode transform -n "R_Front_Lower_Leg_Geo_Grp" -p "Legs_Geo_Grp";
 	rename -uid "C44A8117-4AAD-9CA4-2081-6AB6191ADB37";
@@ -51208,8 +51199,8 @@ createNode nurbsSurface -n "R_Front_Toe_Surface_GeoShapeOrig" -p "R_Front_Toe_Su
 		
 		;
 createNode parentConstraint -n "R_Front_Toe_Surface_Geo_parentConstraint1" -p "R_Front_Toe_Surface_Geo";
-	rename -uid "B5827B60-42AE-C996-1438-C6831448FC99";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Leg_03_JntW0" -dv 1 -min 0 -at "double";
+	rename -uid "98135B36-40DD-B6AB-CECA-B2BC974C4EA1";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_03_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -51222,14 +51213,13 @@ createNode parentConstraint -n "R_Front_Toe_Surface_Geo_parentConstraint1" -p "R
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 4.4749777373953581e-007 4.3585747004915021e-006 
-		-1.6803178642388339e-006 ;
-	setAttr ".tg[0].tor" -type "double3" -180 20.997998770930973 84.485721756768385 ;
-	setAttr ".lr" -type "double3" -1.2722218725854067e-014 -7.0622500768802538e-031 
-		-6.3611093629270335e-015 ;
-	setAttr ".rst" -type "double3" 0 0 -2.0816681711721685e-017 ;
-	setAttr ".rsrr" -type "double3" -1.2722218725854067e-014 -7.0622500768802538e-031 
-		-6.3611093629270335e-015 ;
+	setAttr ".tg[0].tot" -type "double3" 5.3587510692731932e-008 -0.075686216698281239 
+		0.045661236960110957 ;
+	setAttr ".tg[0].tor" -type "double3" -177.79425312842179 -2.490246938495035 84.848054006518296 ;
+	setAttr ".lr" -type "double3" -2.1032348478992144 0.18428114724817543 -0.10209423057082541 ;
+	setAttr ".rst" -type "double3" 0 -2.1510571102112408e-016 9.7144514654701197e-017 ;
+	setAttr ".rsrr" -type "double3" -1.5405811738338913e-015 2.4848083448933769e-016 
+		2.544443745170814e-014 ;
 	setAttr -k on ".w0";
 createNode transform -n "R_Front_Knee_Surface_Geo" -p "R_Front_Lower_Leg_Geo_Grp";
 	rename -uid "4DC565CD-4B7B-A219-C006-B5AED8E81D1E";
@@ -51349,8 +51339,8 @@ createNode nurbsSurface -n "R_Front_Knee_Surface_GeoShapeOrig" -p "R_Front_Knee_
 		
 		;
 createNode parentConstraint -n "R_Front_Knee_Surface_Geo_parentConstraint1" -p "R_Front_Knee_Surface_Geo";
-	rename -uid "464191E3-418D-C1A2-D226-7BA9DD04154A";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Leg_02_JntW0" -dv 1 -min 0 -at "double";
+	rename -uid "B04A5237-40B3-6592-446C-A7BAF1A9DD19";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_02_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -51363,17 +51353,18 @@ createNode parentConstraint -n "R_Front_Knee_Surface_Geo_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -6.6331850190337605e-007 4.5763218148309193e-006 
-		-1.805621127004553e-006 ;
-	setAttr ".tg[0].tor" -type "double3" -180 20.997998770930973 84.485721756768385 ;
-	setAttr ".lr" -type "double3" -1.2722218725854067e-014 -7.0622500768802538e-031 
-		-6.3611093629270335e-015 ;
-	setAttr ".rsrr" -type "double3" -1.2722218725854067e-014 -7.0622500768802538e-031 
-		-6.3611093629270335e-015 ;
+	setAttr ".tg[0].tot" -type "double3" 2.0603989121514843e-006 -0.0063107399086002047 
+		0.001011859126709258 ;
+	setAttr ".tg[0].tor" -type "double3" -177.79425294045029 -2.4902490213560613 84.848053998351048 ;
+	setAttr ".lr" -type "double3" 2.5842006786891068e-015 1.7691835415640811e-014 -6.3611093629270335e-015 ;
+	setAttr ".rst" -type "double3" -2.2204460492503131e-016 -4.4408920985006262e-016 
+		9.7144514654701197e-017 ;
+	setAttr ".rsrr" -type "double3" 7.0568556994971793e-015 -2.9817700138720514e-016 
+		6.3611093629270351e-015 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "R_Front_Lower_Leg_Geo_Grp_parentConstraint1" -p "R_Front_Lower_Leg_Geo_Grp";
-	rename -uid "A2D1E4DA-4CC2-D833-4B72-648E21430AB9";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Leg_02_JntW0" -dv 1 -min 0 -at "double";
+	rename -uid "D58906ED-4231-1122-8F9C-B5AE94DD7DEC";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Leg_02_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -51386,13 +51377,12 @@ createNode parentConstraint -n "R_Front_Lower_Leg_Geo_Grp_parentConstraint1" -p 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -0.6692987772378074 1.2108135830589102 0.31619399050952779 ;
-	setAttr ".tg[0].tor" -type "double3" -180 20.997998770930973 84.485721756768385 ;
-	setAttr ".lr" -type "double3" -1.2722218725854067e-014 -7.0622500768802538e-031 
-		-6.3611093629270335e-015 ;
-	setAttr ".rst" -type "double3" 1.1102230246251565e-016 2.2204460492503131e-016 -1.1102230246251565e-016 ;
-	setAttr ".rsrr" -type "double3" -1.2722218725854067e-014 -7.0622500768802538e-031 
-		-6.3611093629270335e-015 ;
+	setAttr ".tg[0].tot" -type "double3" -0.66929605352039268 0.97681114813245462 0.7752919024837378 ;
+	setAttr ".tg[0].tor" -type "double3" -177.79425294045029 -2.4902490213560613 84.848053998351048 ;
+	setAttr ".lr" -type "double3" -4.2068266823558496 0.36469093223668242 -0.2108847084234329 ;
+	setAttr ".rst" -type "double3" 0 2.2204460492503131e-016 -1.1102230246251565e-016 ;
+	setAttr ".rsrr" -type "double3" 7.0568556994971793e-015 -2.9817700138720514e-016 
+		6.3611093629270351e-015 ;
 	setAttr -k on ".w0";
 createNode joint -n "L_Pinky_Finger_01_Jnt";
 	rename -uid "1CA5004E-47A5-E102-8AE9-81943A6FF515";
@@ -51573,45 +51563,24 @@ createNode joint -n "joint5" -p "Stomach_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.5;
-createNode joint -n "R_Leg_01_Jnt";
-	rename -uid "260545F2-4238-EFE5-5C30-68B87CB28BD6";
-	setAttr ".t" -type "double3" -1.07913 2.62295 0.083772399999999997 ;
-	setAttr ".r" -type "double3" -360 0 0 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -159.09075656516089 1.9733018557015645 84.8498701038517 ;
-	setAttr ".radi" 0.52476234935945187;
-createNode joint -n "R_Leg_02_Jnt" -p "R_Leg_01_Jnt";
-	rename -uid "E7E4D260-49E0-ADA3-7F8A-BA8D33AA2B26";
-	setAttr ".t" -type "double3" -1.4503962913972805 0.0055751038776092887 0.014601174217459267 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".dla" yes;
-	setAttr ".radi" 0.50620524842151959;
-createNode joint -n "R_Leg_03_Jnt" -p "R_Leg_02_Jnt";
-	rename -uid "74A4FAC0-48FB-AAC7-48F8-F6BAFAB5993D";
-	setAttr ".t" -type "double3" -1.1279381515496902 0.14160983279306461 0.14381495174281061 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".dla" yes;
-	setAttr ".radi" 0.50620524842151959;
 createNode joint -n "L_Leg_01_Jnt";
 	rename -uid "E62D5B2B-4865-CD7F-B3AD-209A05865DA8";
 	setAttr ".t" -type "double3" 1.0791279932051558 2.6229511663707621 0.083772420883178711 ;
+	setAttr ".r" -type "double3" 1.5124005746453753 0 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 20.909243434839091 -1.9733018557015671 -84.849870103851686 ;
+	setAttr ".jo" -type "double3" -4.1905567038385696 -1.973301855701568 -84.849870103851671 ;
 	setAttr ".radi" 0.52476234935945187;
 createNode joint -n "L_Leg_02_Jnt" -p "L_Leg_01_Jnt";
 	rename -uid "A4D3ACD3-472B-B538-9E8F-5C9E4F3C43C2";
-	setAttr ".t" -type "double3" 1.450398256559142 -0.0055779365304529094 -0.014600103766589378 ;
+	setAttr ".t" -type "double3" 1.4503982565591422 -0.0055779365304531314 -0.014600103766589378 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.50620524842151959;
-createNode joint -n "L_Leg_03_Jnt" -p "L_Leg_02_Jnt";
+createNode joint -n "L_Leg_03_Jnt" -p "|L_Leg_01_Jnt|L_Leg_02_Jnt";
 	rename -uid "4A694268-4C5D-7448-E0EC-A28ACB64BDF3";
-	setAttr ".t" -type "double3" 1.1279370819334711 -0.14160956655711043 -0.14381509895944744 ;
+	setAttr ".t" -type "double3" 1.1279370819334711 -0.14160956655711021 -0.14381509895944744 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -51677,6 +51646,32 @@ createNode joint -n "R_Arm_03_Jnt" -p "R_Arm_02_Jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.54092056521207499;
+createNode joint -n "R_Leg_01_Jnt";
+	rename -uid "CD2532EF-4E33-F02A-CA84-BE9E5ED10716";
+	setAttr ".t" -type "double3" -1.07913 2.62295 0.083772399999999997 ;
+	setAttr ".r" -type "double3" 1.51342972656235 -2.1128584009036468 -0.055810057437736531 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 175.8094432961615 1.9733018557015691 84.849870103851686 ;
+	setAttr ".radi" 0.52476234935945187;
+createNode joint -n "L_Leg_02_Jnt" -p "R_Leg_01_Jnt";
+	rename -uid "CC9D006D-489F-57A8-DBB6-0F9ABB220F16";
+	setAttr ".t" -type "double3" -1.4503990151146948 0.0055823412435307418 0.014600438429124285 ;
+	setAttr ".r" -type "double3" 0 -2.1135950351871107 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.4787793334710984e-006 3.3188222368945564e-022 -1.0261088619378144e-023 ;
+	setAttr ".radi" 0.50620524842151959;
+createNode joint -n "L_Leg_03_Jnt" -p "|R_Leg_01_Jnt|L_Leg_02_Jnt";
+	rename -uid "B940EC26-4236-E3BF-324D-5CBA5255DA0B";
+	setAttr ".t" -type "double3" -1.1279350339220129 0.14160647834949902 0.14381479158601884 ;
+	setAttr ".r" -type "double3" 0 -2.1135950351871107 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 2.091309789151873e-006 4.5892228989273967e-022 -1.4511368371740241e-023 ;
+	setAttr ".radi" 0.50620524842151959;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "7820E64A-4C21-EC5D-70AE-F0AE5F854062";
 	setAttr -s 10 ".lnk";
@@ -53655,25 +53650,25 @@ connectAttr "L_Front_Toe_Surface_Geo.rp" "L_Front_Toe_Surface_Geo_parentConstrai
 		;
 connectAttr "L_Front_Toe_Surface_Geo.rpt" "L_Front_Toe_Surface_Geo_parentConstraint1.crt"
 		;
-connectAttr "L_Leg_03_Jnt.t" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tt"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.t" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tt"
 		;
-connectAttr "L_Leg_03_Jnt.rp" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trp"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.rp" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trp"
 		;
-connectAttr "L_Leg_03_Jnt.rpt" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trt"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.rpt" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trt"
 		;
-connectAttr "L_Leg_03_Jnt.r" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tr"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.r" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tr"
 		;
-connectAttr "L_Leg_03_Jnt.ro" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tro"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.ro" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tro"
 		;
-connectAttr "L_Leg_03_Jnt.s" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].ts"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.s" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].ts"
 		;
-connectAttr "L_Leg_03_Jnt.pm" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tpm"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.pm" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "L_Leg_03_Jnt.jo" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tjo"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.jo" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tjo"
 		;
-connectAttr "L_Leg_03_Jnt.ssc" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tsc"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.ssc" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tsc"
 		;
-connectAttr "L_Leg_03_Jnt.is" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tis"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.is" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tis"
 		;
 connectAttr "L_Front_Toe_Surface_Geo_parentConstraint1.w0" "L_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tw"
 		;
@@ -53699,25 +53694,25 @@ connectAttr "L_Front_Knee_Surface_Geo.rp" "L_Front_Knee_Surface_Geo_parentConstr
 		;
 connectAttr "L_Front_Knee_Surface_Geo.rpt" "L_Front_Knee_Surface_Geo_parentConstraint1.crt"
 		;
-connectAttr "L_Leg_02_Jnt.t" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tt"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.t" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tt"
 		;
-connectAttr "L_Leg_02_Jnt.rp" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trp"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.rp" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trp"
 		;
-connectAttr "L_Leg_02_Jnt.rpt" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trt"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.rpt" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trt"
 		;
-connectAttr "L_Leg_02_Jnt.r" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tr"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.r" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tr"
 		;
-connectAttr "L_Leg_02_Jnt.ro" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tro"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.ro" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tro"
 		;
-connectAttr "L_Leg_02_Jnt.s" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].ts"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.s" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].ts"
 		;
-connectAttr "L_Leg_02_Jnt.pm" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tpm"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.pm" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "L_Leg_02_Jnt.jo" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tjo"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.jo" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tjo"
 		;
-connectAttr "L_Leg_02_Jnt.ssc" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tsc"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.ssc" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tsc"
 		;
-connectAttr "L_Leg_02_Jnt.is" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tis"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.is" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tis"
 		;
 connectAttr "L_Front_Knee_Surface_Geo_parentConstraint1.w0" "L_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tw"
 		;
@@ -53729,25 +53724,25 @@ connectAttr "L_Front_Lower_Leg_Geo_Grp.rp" "L_Front_Lower_Leg_Geo_Grp_parentCons
 		;
 connectAttr "L_Front_Lower_Leg_Geo_Grp.rpt" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.crt"
 		;
-connectAttr "L_Leg_02_Jnt.t" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tt"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.t" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tt"
 		;
-connectAttr "L_Leg_02_Jnt.rp" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trp"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.rp" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trp"
 		;
-connectAttr "L_Leg_02_Jnt.rpt" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trt"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.rpt" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trt"
 		;
-connectAttr "L_Leg_02_Jnt.r" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tr"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.r" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tr"
 		;
-connectAttr "L_Leg_02_Jnt.ro" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tro"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.ro" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tro"
 		;
-connectAttr "L_Leg_02_Jnt.s" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].ts"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.s" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].ts"
 		;
-connectAttr "L_Leg_02_Jnt.pm" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tpm"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.pm" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "L_Leg_02_Jnt.jo" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tjo"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.jo" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tjo"
 		;
-connectAttr "L_Leg_02_Jnt.ssc" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tsc"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.ssc" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tsc"
 		;
-connectAttr "L_Leg_02_Jnt.is" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tis"
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.is" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tis"
 		;
 connectAttr "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.w0" "L_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tw"
 		;
@@ -53879,25 +53874,25 @@ connectAttr "R_Front_Toe_Surface_Geo.rp" "R_Front_Toe_Surface_Geo_parentConstrai
 		;
 connectAttr "R_Front_Toe_Surface_Geo.rpt" "R_Front_Toe_Surface_Geo_parentConstraint1.crt"
 		;
-connectAttr "R_Leg_03_Jnt.t" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tt"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.t" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tt"
 		;
-connectAttr "R_Leg_03_Jnt.rp" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trp"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.rp" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trp"
 		;
-connectAttr "R_Leg_03_Jnt.rpt" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trt"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.rpt" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].trt"
 		;
-connectAttr "R_Leg_03_Jnt.r" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tr"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.r" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tr"
 		;
-connectAttr "R_Leg_03_Jnt.ro" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tro"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.ro" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tro"
 		;
-connectAttr "R_Leg_03_Jnt.s" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].ts"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.s" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].ts"
 		;
-connectAttr "R_Leg_03_Jnt.pm" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tpm"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.pm" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "R_Leg_03_Jnt.jo" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tjo"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.jo" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tjo"
 		;
-connectAttr "R_Leg_03_Jnt.ssc" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tsc"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.ssc" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tsc"
 		;
-connectAttr "R_Leg_03_Jnt.is" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tis"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.is" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tis"
 		;
 connectAttr "R_Front_Toe_Surface_Geo_parentConstraint1.w0" "R_Front_Toe_Surface_Geo_parentConstraint1.tg[0].tw"
 		;
@@ -53923,25 +53918,25 @@ connectAttr "R_Front_Knee_Surface_Geo.rp" "R_Front_Knee_Surface_Geo_parentConstr
 		;
 connectAttr "R_Front_Knee_Surface_Geo.rpt" "R_Front_Knee_Surface_Geo_parentConstraint1.crt"
 		;
-connectAttr "R_Leg_02_Jnt.t" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tt"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.t" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tt"
 		;
-connectAttr "R_Leg_02_Jnt.rp" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trp"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.rp" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trp"
 		;
-connectAttr "R_Leg_02_Jnt.rpt" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trt"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.rpt" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].trt"
 		;
-connectAttr "R_Leg_02_Jnt.r" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tr"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.r" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tr"
 		;
-connectAttr "R_Leg_02_Jnt.ro" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tro"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.ro" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tro"
 		;
-connectAttr "R_Leg_02_Jnt.s" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].ts"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.s" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].ts"
 		;
-connectAttr "R_Leg_02_Jnt.pm" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tpm"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.pm" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "R_Leg_02_Jnt.jo" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tjo"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.jo" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tjo"
 		;
-connectAttr "R_Leg_02_Jnt.ssc" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tsc"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.ssc" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tsc"
 		;
-connectAttr "R_Leg_02_Jnt.is" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tis"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.is" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tis"
 		;
 connectAttr "R_Front_Knee_Surface_Geo_parentConstraint1.w0" "R_Front_Knee_Surface_Geo_parentConstraint1.tg[0].tw"
 		;
@@ -53953,25 +53948,25 @@ connectAttr "R_Front_Lower_Leg_Geo_Grp.rp" "R_Front_Lower_Leg_Geo_Grp_parentCons
 		;
 connectAttr "R_Front_Lower_Leg_Geo_Grp.rpt" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.crt"
 		;
-connectAttr "R_Leg_02_Jnt.t" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tt"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.t" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tt"
 		;
-connectAttr "R_Leg_02_Jnt.rp" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trp"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.rp" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trp"
 		;
-connectAttr "R_Leg_02_Jnt.rpt" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trt"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.rpt" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].trt"
 		;
-connectAttr "R_Leg_02_Jnt.r" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tr"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.r" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tr"
 		;
-connectAttr "R_Leg_02_Jnt.ro" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tro"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.ro" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tro"
 		;
-connectAttr "R_Leg_02_Jnt.s" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].ts"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.s" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].ts"
 		;
-connectAttr "R_Leg_02_Jnt.pm" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tpm"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.pm" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "R_Leg_02_Jnt.jo" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tjo"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.jo" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tjo"
 		;
-connectAttr "R_Leg_02_Jnt.ssc" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tsc"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.ssc" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tsc"
 		;
-connectAttr "R_Leg_02_Jnt.is" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tis"
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.is" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tis"
 		;
 connectAttr "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.w0" "R_Front_Lower_Leg_Geo_Grp_parentConstraint1.tg[0].tw"
 		;
@@ -53991,14 +53986,16 @@ connectAttr "R_Mid_Finger_01_Jnt.s" "R_Mid_Finger_02_Jnt.is";
 connectAttr "R_Mid_Finger_02_Jnt.s" "R_Mid_Finger_03_Jnt.is";
 connectAttr "Spine_Jnt.s" "Neck_Jnt.is";
 connectAttr "Stomach_Jnt.s" "joint5.is";
-connectAttr "R_Leg_01_Jnt.s" "R_Leg_02_Jnt.is";
-connectAttr "R_Leg_02_Jnt.s" "R_Leg_03_Jnt.is";
-connectAttr "L_Leg_01_Jnt.s" "L_Leg_02_Jnt.is";
-connectAttr "L_Leg_02_Jnt.s" "L_Leg_03_Jnt.is";
+connectAttr "L_Leg_01_Jnt.s" "|L_Leg_01_Jnt|L_Leg_02_Jnt.is";
+connectAttr "|L_Leg_01_Jnt|L_Leg_02_Jnt.s" "|L_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.is"
+		;
 connectAttr "L_Arm_01_Jnt.s" "L_Arm_02_Jnt.is";
 connectAttr "L_Arm_02_Jnt.s" "L_Arm_03_Jnt.is";
 connectAttr "R_Arm_01_Jnt.s" "R_Arm_02_Jnt.is";
 connectAttr "R_Arm_02_Jnt.s" "R_Arm_03_Jnt.is";
+connectAttr "R_Leg_01_Jnt.s" "|R_Leg_01_Jnt|L_Leg_02_Jnt.is";
+connectAttr "|R_Leg_01_Jnt|L_Leg_02_Jnt.s" "|R_Leg_01_Jnt|L_Leg_02_Jnt|L_Leg_03_Jnt.is"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "aqua_shaderSG.message" ":defaultLightSet.message";
