@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: LeopardSeal.ma
-//Last modified: Thu, Mar 28, 2019 02:02:05 PM
+//Last modified: Thu, Mar 28, 2019 02:03:50 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -132,8 +132,8 @@ createNode camera -n "backShape" -p "back";
 	setAttr ".o" yes;
 createNode transform -n "persp1";
 	rename -uid "4A0B6E5F-4A18-592D-F59A-2DB495726C79";
-	setAttr ".t" -type "double3" -42.777928689080412 36.827200487202731 -106.78149602472277 ;
-	setAttr ".r" -type "double3" -18.338354113584003 -528.99999999940462 0 ;
+	setAttr ".t" -type "double3" -39.366604393309345 16.995580476043859 -60.899582086155256 ;
+	setAttr ".r" -type "double3" -11.13835411358323 -511.39999999937032 0 ;
 	setAttr ".rp" -type "double3" 2.4868995751603507e-14 1.2656542480726785e-14 0 ;
 	setAttr ".rpt" -type "double3" -4.1889328507773142e-14 -2.4998165357684116e-15 -1.230421608625153e-14 ;
 createNode camera -n "persp1Shape" -p "persp1";
@@ -141,7 +141,7 @@ createNode camera -n "persp1Shape" -p "persp1";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 118.59915090533964;
+	setAttr ".coi" 52.244634722536389;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -160,7 +160,21 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.20264144241809845 ;
+	setAttr ".pv" -type "double2" 0.5 1 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 2 ".pt[20:21]" -type "float3"  0.00028648868 0.023281837 
+		-0.035855345 0.00028648868 0.023281837 -0.035855345;
+createNode mesh -n "polySurfaceShape26" -p "pPlane1";
+	rename -uid "4D868450-480F-7AC1-34EC-85BCC344F73C";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 16 ".uvst[0].uvsp[0:15]" -type "float2" 0 0 1 0 0 1 1 1 0
 		 0 1 0 1 1 0 1 0 0.20264144 1 0.20264144 1 0.4387365 0 0.4387365 1 0.68188274 0 0.68188274
@@ -65850,7 +65864,7 @@ createNode mesh -n "polySurface24Shape" -p "|polySurface24";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 5 ".pt";
+	setAttr -s 6 ".pt";
 	setAttr ".pt[1234]" -type "float3" -0.042164441 0 0 ;
 	setAttr ".pt[1235]" -type "float3" 0.081189804 0 0 ;
 	setAttr ".pt[1236]" -type "float3" 0.13169929 0 0 ;
@@ -73194,6 +73208,19 @@ createNode polyTweak -n "polyTweak109";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[1235:1237]" -type "float3"  0.17956559 0 -0.50644642 0
 		 0 0 0 0 0;
+createNode polyExtrudeFace -n "polyExtrudeFace1";
+	rename -uid "84FDADD4-46D5-99CF-35A6-51BD254DA080";
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 2.9985710174915088 -0.091793938503086842 -0.012071698887452718 0
+		 0.064856377716946023 2.3617486005951474 -1.8487663989418184 0 0.066071955695095344 1.8476248051054507 2.362608108897807 0
+		 -15.085072504898179 9.9432273417201955 -17.879579375892629 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -15.174997 9.791441 -18.440159 ;
+	setAttr ".rs" 36121;
+	setAttr ".lt" -type "double3" 3.2160689042437518e-15 -2.2204460492503131e-16 0.084537317676958421 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -16.875216695092021 8.5757236104711385 -20.132018455030682 ;
+	setAttr ".cbx" -type "double3" -13.452289808722583 10.950182710201505 -16.695640041939541 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -73236,6 +73263,7 @@ connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape1.ws";
+connectAttr "polyExtrudeFace1.out" "pPlaneShape1.i";
 connectAttr "groupParts12.og" "pSphereShape9.i";
 connectAttr "groupId24.id" "pSphereShape9.iog.og[1].gid";
 connectAttr ":initialShadingGroup.mwc" "pSphereShape9.iog.og[1].gco";
@@ -74764,6 +74792,8 @@ connectAttr "polySurface24Shape.wm" "polyBridgeEdge115.mp";
 connectAttr "polyTweak109.out" "polyBridgeEdge116.ip";
 connectAttr "polySurface24Shape.wm" "polyBridgeEdge116.mp";
 connectAttr "polyBridgeEdge115.out" "polyTweak109.ip";
+connectAttr "polySurfaceShape26.o" "polyExtrudeFace1.ip";
+connectAttr "pPlaneShape1.wm" "polyExtrudeFace1.mp";
 connectAttr "Cat:catSG.pa" ":renderPartition.st" -na;
 connectAttr "Cat:blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "Cat1:catSG.pa" ":renderPartition.st" -na;
