@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: BlueRobot.ma
-//Last modified: Thu, Mar 28, 2019 05:48:04 AM
+//Last modified: Thu, Mar 28, 2019 05:53:10 AM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -15,14 +15,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DB04E300-4D3C-4BB0-DCE5-8192AEF35D23";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.0818963853636392 11.678532917872753 9.7209721113669065 ;
-	setAttr ".r" -type "double3" -24.938352649092291 -3214.6000000002491 0 ;
+	setAttr ".t" -type "double3" 6.5839742283292706 15.513615324294454 17.662300195406985 ;
+	setAttr ".r" -type "double3" -32.138352649080275 -3220.6000000001973 -8.4300208828220145e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CC0963B7-4FEE-36D0-55E1-6C9298C5A8DA";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 36.826499438078606;
-	setAttr ".coi" 13.995119463746484;
+	setAttr ".coi" 21.402065159804071;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
